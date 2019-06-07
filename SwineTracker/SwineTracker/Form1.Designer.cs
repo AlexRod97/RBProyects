@@ -34,11 +34,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(184, 63);
+            this.button1.Location = new System.Drawing.Point(147, 63);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 40);
             this.button1.TabIndex = 0;
@@ -48,7 +49,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(295, 63);
+            this.button2.Location = new System.Drawing.Point(258, 63);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 40);
             this.button2.TabIndex = 1;
@@ -57,7 +58,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(407, 63);
+            this.button3.Location = new System.Drawing.Point(370, 63);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(78, 40);
             this.button3.TabIndex = 2;
@@ -67,7 +68,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(509, 63);
+            this.button4.Location = new System.Drawing.Point(472, 63);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 40);
             this.button4.TabIndex = 3;
@@ -81,8 +82,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(630, 22);
             this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "W471,1,2,1,0&10/3/2017,3&|6/8/2019|$15/9/2017$!30/7/2019!2,6,1,1@8/8/2019%6,8,13," +
-    "7,14,10,13,14%@";
+            this.textBox1.Text = "#W471,1,2,1,0#&10/3/2017,3&|6/8/2019|$15/9/2017$!30/7/2019!2,6,1,1@8/8/2019%6,8,1" +
+    "3,7,14,10,13,14%@";
             // 
             // textBox2
             // 
@@ -93,11 +94,22 @@
             this.textBox2.Text = "W500,1,2,1,0&10/3/2017,3&|6/8/2019|$15/9/2017$!30/7/2019!2,6,1,1@8/8/2019%6,8,13," +
     "7,14,10,13,14%@";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(568, 63);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 40);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Distribuir";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button4);
@@ -120,6 +132,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button5;
     }
 }
 

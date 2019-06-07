@@ -8,14 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SwineTracker.Data_Structure;
-
+using SwineTracker.DataStructure;
 
 namespace SwineTracker
 {
     public partial class Form1 : Form
     {
         Main dataStructure = new Main();
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -41,6 +41,12 @@ namespace SwineTracker
         {
             dataStructure.Delete(textBox1.Text);
             MessageBox.Show("Eliminado");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SwineFabric fabric = new SwineFabric();
+            fabric.Distribute(textBox1.Text);
         }
     }
 }
