@@ -47,6 +47,7 @@ namespace SwineTracker
         {
             SwineFabric fabric = new SwineFabric();
             fabric.Distribute(textBox1.Text);
+            fabric.AsignarElementos();
         }
     }
 }

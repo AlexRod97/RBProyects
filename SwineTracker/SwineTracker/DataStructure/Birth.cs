@@ -45,6 +45,16 @@ namespace SwineTracker.DataStructure
             this.nacidosVivos = item;
         }
 
+        public int getNacidosMuertos()
+        {
+            return this.nacidosMuertos;
+        }
+
+        public void setNacidosMuertos(int item)
+        {
+            this.nacidosMuertos = item;
+        }
+
         public int getNacidosMomias()
         {
             return this.nacidosMomias;
@@ -54,7 +64,6 @@ namespace SwineTracker.DataStructure
         {
             this.nacidosMomias = item;
         }
-
-
+        
     }
 }

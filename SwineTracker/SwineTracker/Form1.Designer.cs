@@ -78,21 +78,21 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(59, 138);
+            this.textBox1.Location = new System.Drawing.Point(33, 138);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(630, 22);
+            this.textBox1.Size = new System.Drawing.Size(755, 22);
             this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "#W471,1,2,1,0#&10/3/2017,3&|6/8/2019|$15/9/2017$!30/7/2019!2,6,1,1@8/8/2019%6,8,1" +
-    "3,7,14,10,13,14%@";
+            this.textBox1.Text = "#W593,4,4,2,0#&23/1/2019,6&|31/8/2018|$19/2/2018$!9/5/2018!7,6,1,1@?29/8/2017,4,9" +
+    ",1,1?%6,8,13,12,14,10,14,10,13,6,12%@";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(59, 208);
+            this.textBox2.Location = new System.Drawing.Point(33, 208);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(630, 22);
+            this.textBox2.Size = new System.Drawing.Size(755, 22);
             this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "W500,1,2,1,0&10/3/2017,3&|6/8/2019|$15/9/2017$!30/7/2019!2,6,1,1@8/8/2019%6,8,13," +
-    "7,14,10,13,14%@";
+            this.textBox2.Text = "#W5000,4,4,2,0#&23/1/2019,6&|31/8/2018|$19/2/2018$!9/5/2018!7,6,1,1@?29/8/2017,4," +
+    "9,1,1?%6,8,13,12,14,10,14,10,13,6,12%@";
             // 
             // button5
             // 
