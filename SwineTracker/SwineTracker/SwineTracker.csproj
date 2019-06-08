@@ -56,8 +56,26 @@
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Vistas\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Comparativa por hembra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Comparativa por hembra.Designer.cs">
+      <DependentUpon>Comparativa por hembra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Fechas de confirmacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Fechas de confirmacion.Designer.cs">
+      <DependentUpon>Fechas de confirmacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Menu Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Menu Principal.Designer.cs">
+      <DependentUpon>Menu Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,5 +107,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

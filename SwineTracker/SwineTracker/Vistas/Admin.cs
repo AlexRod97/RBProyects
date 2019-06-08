@@ -10,13 +10,14 @@ using System.Windows.Forms;
 using SwineTracker.Data_Structure;
 using SwineTracker.DataStructure;
 
-namespace SwineTracker
+namespace SwineTracker.Vistas
 {
-    public partial class Form1 : Form
+    public partial class Admin : Form
     {
         Main dataStructure = new Main();
         
         public Form1()
+        public Admin()
         {
             InitializeComponent();
         }
