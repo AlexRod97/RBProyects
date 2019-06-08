@@ -59,6 +59,12 @@
     <Compile Include="Vistas\Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Comparativa por fechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Comparativa por fechas.Designer.cs">
+      <DependentUpon>Comparativa por fechas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Comparativa por hembra.cs">
       <SubType>Form</SubType>
     </Compile>

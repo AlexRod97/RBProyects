@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SwineTracker.Vistas
 {
-    public partial class Comparativa_por_hembra : Form
+    public partial class Comparativa_por_fechas : Form
     {
-        public Comparativa_por_hembra()
+        public Comparativa_por_fechas()
         {
             InitializeComponent();
         }
@@ -25,4 +25,5 @@ namespace SwineTracker.Vistas
             this.Close();
         }
     }
+    
 }

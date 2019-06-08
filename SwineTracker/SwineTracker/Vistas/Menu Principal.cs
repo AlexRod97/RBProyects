@@ -28,5 +28,52 @@ namespace SwineTracker
             fh.Show();
             this.Visible = false;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Vistas.Comparativa_por_hembra ch = new Vistas.Comparativa_por_hembra();
+            ch.Show();
+            this.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Vistas.Comparativa_por_fechas cf = new Vistas.Comparativa_por_fechas();
+            cf.Show();
+            this.Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Vistas.Proyeccion_de_partos pp = new Vistas.Proyeccion_de_partos();
+            pp.Show();
+            this.Visible = false;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Vistas.Fechas_de_confirmacion fc = new Vistas.Fechas_de_confirmacion();
+            fc.Show();
+            this.Visible = false;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Vistas.Notificaciones n = new Vistas.Notificaciones();
+            n.Show();
+            this.Visible = false;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Vistas.Singin s = new Vistas.Singin();
+            s.Show();
+            this.Visible = false;
+        }
     }
 }
