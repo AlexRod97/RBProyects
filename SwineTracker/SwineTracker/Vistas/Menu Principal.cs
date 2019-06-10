@@ -71,9 +71,19 @@ namespace SwineTracker
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Vistas.Singin s = new Vistas.Singin();
+            Vistas.Login s = new Vistas.Login();
             s.Show();
             this.Visible = false;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

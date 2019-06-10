@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SwineTracker.Vistas
 {
-    public partial class Singin : Form
+    public partial class Login : Form
     {
-        public Singin()
+        public Login()
         {
             InitializeComponent();
         }
@@ -21,8 +21,7 @@ namespace SwineTracker.Vistas
         {
             MenuPrincipal mp = new MenuPrincipal();
             mp.Show();
-            this.Visible = false;
-            this.Close();
+            this.Visible = false;           
         }
     }
 }
