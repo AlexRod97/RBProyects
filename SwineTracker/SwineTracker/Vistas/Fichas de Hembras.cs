@@ -24,5 +24,12 @@ namespace SwineTracker.Vistas
             this.Visible = false;
             this.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Vistas.Actividad a = new Vistas.Actividad();
+            a.Show();
+
+        }
     }
 }
