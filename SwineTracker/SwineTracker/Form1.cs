@@ -23,7 +23,7 @@ namespace SwineTracker
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            dataStructure.BuildDirectory(SwineTracker.Properties.Settings.Default.FileDirectory);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace SwineTracker
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dataStructure.Update(textBox2.Text, textBox1.Text);
+            dataStructure.Update(textBox2.Text);
             MessageBox.Show("Actualizado");
         }
 
@@ -46,8 +46,27 @@ namespace SwineTracker
         private void button5_Click(object sender, EventArgs e)
         {
             SwineFabric fabric = new SwineFabric();
-            fabric.Distribute(textBox1.Text);
-            fabric.AsignarElementos();
+            Swine swine = new Swine(); 
+
+            swine = fabric.Distribute(textBox1.Text);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<Swine> result = new List<Swine>();
+           result = dataStructure.BuscarPorArete(textBox3.Text);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialog1.Description = "Seleccionar ruta de almacenamiento";
+            //saveFileDialog1.CheckPathExists = true;
+
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                SwineTracker.Properties.Settings.Default.FileDirectory = folderBrowserDialog1.SelectedPath;
+                SwineTracker.Properties.Settings.Default.Save();
+            }
         }
     }
 }

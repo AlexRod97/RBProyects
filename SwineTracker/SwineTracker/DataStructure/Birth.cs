@@ -8,12 +8,70 @@ namespace SwineTracker.DataStructure
 {
     public class Birth
     {
+        private string fechaInseminacion;
+        private string fechaConfirmacion21;
+        private string fechaConfirmacion28;
+        private string fechaFalsaPreniez;
+        private string fechaPosibleParto;
         private string fechaParto;
         private int totalNacidos;
+        private int totalMachos;
+        private int totalHembras;
         private int nacidosVivos;
         private int nacidosMuertos;
         private int nacidosMomias;
-        public List<int> pesos = new List<int>(); 
+        public List<int> pesos = new List<int>();
+
+
+        public string getFechaInseminacion()
+        {
+            return this.fechaInseminacion;
+        }
+
+        public void setFechaInseminacion(string item)
+        {
+            this.fechaInseminacion = item;
+        }
+
+        public string getFechaConfirmacion21()
+        {
+            return this.fechaConfirmacion21;
+        }
+
+        public void setFechaConfirmacion21(string item)
+        {
+            this.fechaConfirmacion21 = item;
+        }
+
+        public string getFechaConfirmacion28()
+        {
+            return this.fechaConfirmacion28;
+        }
+
+        public void setFechaConfirmacion28(string item)
+        {
+            this.fechaConfirmacion28 = item;
+        }
+
+        public string getFechaFalsaPreniez()
+        {
+            return this.fechaFalsaPreniez;
+        }
+
+        public void setFechaFalsaPreniez(string item)
+        {
+            this.fechaFalsaPreniez = item;
+        }
+
+        public string getFechaPosibleParto()
+        {
+            return this.fechaPosibleParto;
+        }
+
+        public void setFechaPosibleParto(string item)
+        {
+            this.fechaPosibleParto = item;
+        }
 
         public string getFechaParto()
         {
@@ -23,6 +81,26 @@ namespace SwineTracker.DataStructure
         public void setFechaParto(string item)
         {
             this.fechaParto = item;
+        }
+
+        public int getTotalMachos()
+        {
+            return this.totalMachos;
+        }
+
+        public void setTotalMachos(int item)
+        {
+            this.totalMachos = item;
+        }
+
+        public int getTotalHembras()
+        {
+            return this.totalHembras;
+        }
+
+        public void setTotalHembras(int item)
+        {
+            this.totalHembras = item;
         }
 
         public int getTotalNacidos()
@@ -43,7 +121,7 @@ namespace SwineTracker.DataStructure
         public void setNacidosVivos(int item)
         {
             this.nacidosVivos = item;
-        }
+        }       
 
         public int getNacidosMuertos()
         {
@@ -64,6 +142,53 @@ namespace SwineTracker.DataStructure
         {
             this.nacidosMomias = item;
         }
-        
+             
+
+        public string ConvertString()
+        {
+            StringBuilder line = new StringBuilder();
+
+            line.Append("@");
+
+            line.Append(getFechaInseminacion());
+            line.Append("|");
+            line.Append(getFechaConfirmacion21());
+            line.Append("|");
+            line.Append(getFechaConfirmacion28());
+            line.Append("|");
+            line.Append(getFechaFalsaPreniez());
+            line.Append("|");
+            line.Append(getFechaPosibleParto());
+            line.Append("|");
+            line.Append(getFechaParto());
+            line.Append("|");
+            line.Append(getTotalMachos());
+            line.Append("|");
+            line.Append(getTotalHembras());
+            line.Append("|");
+            line.Append(getTotalNacidos());
+            line.Append("|");
+            line.Append(getNacidosVivos());
+            line.Append("|");
+            line.Append(getNacidosMuertos());
+            line.Append("|");
+            line.Append(getNacidosMomias());
+            line.Append("|");
+            for (int i = 0; i < pesos.Count; i++)
+            {
+                if (i + 1 < pesos.Count)
+                {
+                    line.Append(pesos.ElementAt(i) + ",");
+                }
+                else
+                {
+                    line.Append(pesos.ElementAt(i));
+                }
+            }
+            
+            line.Append("@");
+
+            return line.ToString();
+        }
     }
 }

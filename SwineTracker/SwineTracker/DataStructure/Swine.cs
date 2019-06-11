@@ -9,15 +9,14 @@ namespace SwineTracker.DataStructure
     public class Swine
     {
         private string arete;
+        private string lote; 
         private int totalPartos;
         private int totalLechonesVivos;
         private int totalLechonesMuertos;
         private int totalLechonesMomias;
         private string fechaIngreso;
         private int numSemanas;
-        public List<string> fechasInseminacion = new List<string>();
-        public List<string> fechasConfirmacion = new List<string>();
-        public List<string> fechasFalsaPreniez = new List<string>();
+        private string comentario; 
         public List<Birth> partos = new List<Birth>(); 
 
         public string getArete()
@@ -28,6 +27,16 @@ namespace SwineTracker.DataStructure
         public void setArete(string item)
         {
             this.arete = item;
+        }
+
+        public string getLote()
+        {
+            return this.lote; 
+        }
+
+        public void setLote(string item)
+        {
+            this.lote = item;
         }
 
         public int getTotalPartos()
@@ -91,7 +100,45 @@ namespace SwineTracker.DataStructure
             this.numSemanas = item;
         }
 
+        public string getComentario()
+        {
+            return this.comentario; 
+        }
 
+        public void setComentario(string item)
+        {
+            this.comentario = item;
+        }
+
+        public string ConvertString()
+        {
+            StringBuilder line = new StringBuilder();
+
+            line.Append(getArete());
+            line.Append("|");
+            line.Append(getTotalPartos());
+            line.Append("|");
+            line.Append(getTotalLechonesVivos());
+            line.Append("|");
+            line.Append(getTotalLechonesMuertos());
+            line.Append("|");
+            line.Append(getTotalLechonesMomia());
+            line.Append("|");
+            line.Append(getFechaIngreso());
+            line.Append("|");
+            line.Append(getNumSemanas());
+            line.Append("|");
+            line.Append(getComentario()); 
+            line.Append("|");
+
+            for (int i = 0; i < partos.Count; i++)
+            {
+                line.Append(partos.ElementAt(i).ConvertString());
+            }
+
+            return line.ToString();
+        }
 
     }
+
 }

@@ -4,13 +4,27 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SwineTracker.DataStructure;
 
 namespace SwineTracker.Data_Structure
 {
    public class Main
     {
-        private string fileName = @"D:\\Escritorio\\Master.txt";
+        private string fileName = "";
+        SwineFabric swineFabric = new SwineFabric();
+        Swine newSwine = new Swine();
+        Swine oldSwine = new Swine();
 
+        public void BuildDirectory(string fileDirectory)
+        {
+            fileName = fileDirectory + "\\Master.txt";
+            using (StreamWriter sw = (File.Exists(fileName)) ? File.AppendText(fileName) : File.CreateText(fileName))
+            {
+                sw.Close();
+            }
+
+
+        }
 
         public void Insert(string data)
         {
@@ -18,29 +32,25 @@ namespace SwineTracker.Data_Structure
             {
                 sw.WriteLine(data);
             }
-
         }
 
-        public void Read()
-        {
-
-        }
-
-        public void Update(string updatedData, string oldData)
+        public void Update(string updatedData)
         {
             StreamReader sr = new StreamReader(fileName);
             string tempName = @"D:\\Escritorio\\temp.txt";
             StreamWriter sw = new StreamWriter(tempName);
+            newSwine = swineFabric.Distribute(updatedData);
 
             while (!sr.EndOfStream)
             {
                 string old = sr.ReadLine();
+                oldSwine = swineFabric.Distribute(old);
 
-                if (old != oldData)
+                if (newSwine.getArete() != oldSwine.getArete())
                 {
                     sw.WriteLine(old);
                 }
-                else if (old == oldData)
+                else if (newSwine.getArete() == oldSwine.getArete())
                 {
                     sw.WriteLine(updatedData);
                 }
@@ -56,6 +66,7 @@ namespace SwineTracker.Data_Structure
             StreamReader sr = new StreamReader(fileName);
             string tempName = @"D:\\Escritorio\\temp.txt";
             StreamWriter sw = new StreamWriter(tempName);
+            newSwine = swineFabric.Distribute(deleteData);
 
             while (!sr.EndOfStream)
             {
@@ -74,6 +85,29 @@ namespace SwineTracker.Data_Structure
             sw.Close();
             File.Delete(fileName);
             File.Move(tempName, fileName);
+        }
+
+        public List<Swine> BuscarPorArete(string item)
+        {
+            StreamReader sr = new StreamReader(fileName);
+            string tempName = @"D:\\Escritorio\\temp.txt";
+            StreamWriter sw = new StreamWriter(tempName);
+            List<Swine> results = new List<Swine>();
+
+            while (!sr.EndOfStream)
+            {
+                string old = sr.ReadLine();
+                oldSwine = swineFabric.Distribute(old);
+
+                if (oldSwine.getArete().Contains(item))
+                {
+                    results.Add(oldSwine);
+                }
+            }
+            sr.Close();
+            sw.Close();
+
+            return results;
         }
     }
 }
