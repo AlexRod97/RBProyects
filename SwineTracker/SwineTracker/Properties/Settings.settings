@@ -3,7 +3,10 @@
   <Profiles />
   <Settings>
     <Setting Name="FileDirectory" Type="System.String" Scope="User">
-      <Value Profile="(Default)">D:\Carpeta de prueba\</Value>
+      <Value Profile="(Default)">null</Value>
+    </Setting>
+    <Setting Name="FirstRun" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

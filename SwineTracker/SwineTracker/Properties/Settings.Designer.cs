@@ -25,13 +25,25 @@ namespace SwineTracker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("D:\\Carpeta de prueba\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("null")]
         public string FileDirectory {
             get {
                 return ((string)(this["FileDirectory"]));
             }
             set {
                 this["FileDirectory"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstRun {
+            get {
+                return ((bool)(this["FirstRun"]));
+            }
+            set {
+                this["FirstRun"] = value;
             }
         }
     }

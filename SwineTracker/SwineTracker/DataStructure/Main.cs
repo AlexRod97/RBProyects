@@ -10,20 +10,19 @@ namespace SwineTracker.Data_Structure
 {
    public class Main
     {
-        private string fileName = "";
+        private string fileName = "", MainfileDirectory = "";
         SwineFabric swineFabric = new SwineFabric();
         Swine newSwine = new Swine();
         Swine oldSwine = new Swine();
 
         public void BuildDirectory(string fileDirectory)
         {
+            MainfileDirectory = fileDirectory;
             fileName = fileDirectory + "\\Master.txt";
             using (StreamWriter sw = (File.Exists(fileName)) ? File.AppendText(fileName) : File.CreateText(fileName))
             {
                 sw.Close();
             }
-
-
         }
 
         public void Insert(string data)
@@ -37,7 +36,7 @@ namespace SwineTracker.Data_Structure
         public void Update(string updatedData)
         {
             StreamReader sr = new StreamReader(fileName);
-            string tempName = @"D:\\Escritorio\\temp.txt";
+            string tempName = MainfileDirectory + "\\temp.txt";
             StreamWriter sw = new StreamWriter(tempName);
             newSwine = swineFabric.Distribute(updatedData);
 
@@ -64,7 +63,7 @@ namespace SwineTracker.Data_Structure
         public void Delete(string deleteData)
         {
             StreamReader sr = new StreamReader(fileName);
-            string tempName = @"D:\\Escritorio\\temp.txt";
+            string tempName = MainfileDirectory + "\\temp.txt";
             StreamWriter sw = new StreamWriter(tempName);
             newSwine = swineFabric.Distribute(deleteData);
 
