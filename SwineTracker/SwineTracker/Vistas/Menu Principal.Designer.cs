@@ -41,6 +41,7 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // button1
@@ -131,6 +132,7 @@
             this.button9.TabIndex = 8;
             this.button9.Text = "Cargar base de datos";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -140,6 +142,7 @@
             this.button10.TabIndex = 9;
             this.button10.Text = "Exportar base de datos";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -169,6 +172,10 @@
             this.button13.TabIndex = 12;
             this.button13.Text = "Dar de baja";
             this.button13.UseVisualStyleBackColor = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "Excel";
             // 
             // MenuPrincipal
             // 
@@ -211,6 +218,7 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

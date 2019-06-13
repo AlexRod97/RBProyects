@@ -66,10 +66,10 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Location = new System.Drawing.Point(0, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(474, 502);
+            this.tabControl1.Size = new System.Drawing.Size(474, 500);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage3
@@ -84,7 +84,7 @@
             this.tabPage3.Controls.Add(this.textBox1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(466, 476);
+            this.tabPage3.Size = new System.Drawing.Size(466, 474);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Inseminacion y confirmaciones";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -179,7 +179,7 @@
             this.tabPage4.Controls.Add(this.label5);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(466, 476);
+            this.tabPage4.Size = new System.Drawing.Size(466, 474);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Partos";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -201,6 +201,7 @@
             this.button2.TabIndex = 13;
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox8
             // 
