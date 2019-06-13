@@ -83,6 +83,12 @@
     <Compile Include="Vistas\Comparativa por hembra.Designer.cs">
       <DependentUpon>Comparativa por hembra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\DeBaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\DeBaja.Designer.cs">
+      <DependentUpon>DeBaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Fechas de confirmacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\DeBaja.resx">
+      <DependentUpon>DeBaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Fichas de Hembras.resx">
       <DependentUpon>Fichas de Hembras.cs</DependentUpon>

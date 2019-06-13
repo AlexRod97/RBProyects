@@ -35,6 +35,10 @@ namespace SwineTracker.Vistas
             swine.setFechaIngreso(txtFechaIngreso.Text);
             swine.setfechaNacimiento(txtFechaNacimiento.Text);
             main.Insert(swine.ConvertString());
+            MessageBox.Show("Ingreso exitoso");
+            txtFechaIngreso.Clear();
+            txtFechaNacimiento.Clear();
+            txtHembra.Clear();
         }
     }
 }

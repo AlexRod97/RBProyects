@@ -39,11 +39,13 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(191, 66);
+            this.button1.Location = new System.Drawing.Point(355, 95);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 86);
             this.button1.TabIndex = 0;
@@ -53,7 +55,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(300, 66);
+            this.button2.Location = new System.Drawing.Point(476, 95);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(89, 86);
             this.button2.TabIndex = 1;
@@ -63,7 +65,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(417, 66);
+            this.button3.Location = new System.Drawing.Point(588, 95);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(89, 86);
             this.button3.TabIndex = 2;
@@ -73,7 +75,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(537, 66);
+            this.button4.Location = new System.Drawing.Point(239, 201);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(89, 86);
             this.button4.TabIndex = 3;
@@ -83,7 +85,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(537, 172);
+            this.button5.Location = new System.Drawing.Point(476, 201);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(89, 86);
             this.button5.TabIndex = 4;
@@ -93,7 +95,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(300, 172);
+            this.button6.Location = new System.Drawing.Point(355, 201);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(89, 86);
             this.button6.TabIndex = 5;
@@ -113,7 +115,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(191, 172);
+            this.button8.Location = new System.Drawing.Point(130, 201);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(89, 86);
             this.button8.TabIndex = 7;
@@ -141,7 +143,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(417, 172);
+            this.button11.Location = new System.Drawing.Point(130, 95);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(89, 86);
             this.button11.TabIndex = 10;
@@ -149,11 +151,32 @@
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click_1);
             // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(239, 95);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(89, 86);
+            this.button12.TabIndex = 11;
+            this.button12.Text = "Agregar inseminacion y/o Parto";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(588, 201);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(89, 86);
+            this.button13.TabIndex = 12;
+            this.button13.Text = "Dar de baja";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
@@ -186,6 +209,8 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
     }
 }
 

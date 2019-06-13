@@ -92,5 +92,14 @@ namespace SwineTracker
             s.Show();
             this.Visible = false;
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Vistas.Actividad actividad = new Vistas.Actividad();
+            actividad.Show();
+            this.Visible = false;
+
+ 
+        }
     }
 }

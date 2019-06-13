@@ -24,7 +24,8 @@ namespace SwineTracker.Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            MenuPrincipal mp = new MenuPrincipal();
+            mp.Show();
             this.Visible = false;
             this.Close();
         }
