@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SwineTracker.Data_Structure;
 using SwineTracker.DataStructure;
 
 namespace SwineTracker.Vistas

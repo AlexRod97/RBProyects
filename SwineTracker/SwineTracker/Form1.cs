@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SwineTracker.Data_Structure;
 using SwineTracker.DataStructure;
 
 namespace SwineTracker
@@ -22,9 +21,7 @@ namespace SwineTracker
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-            //SwineTracker.Properties.Settings.Default.Reset();
-
+        {  
             if (SwineTracker.Properties.Settings.Default.FirstRun == true)
             {
                 SwineTracker.Properties.Settings.Default.FirstRun = false;

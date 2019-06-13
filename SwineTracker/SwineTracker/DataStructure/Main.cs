@@ -6,11 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using SwineTracker.DataStructure;
 
-namespace SwineTracker.Data_Structure
+namespace SwineTracker.DataStructure
 {
    public class Main
     {
-        private string fileName = "", MainfileDirectory = "";
+        private string fileName = "\\Master.txt", MainfileDirectory = SwineTracker.Properties.Settings.Default.FileDirectory;
         SwineFabric swineFabric = new SwineFabric();
         Swine newSwine = new Swine();
         Swine oldSwine = new Swine();
@@ -27,6 +27,7 @@ namespace SwineTracker.Data_Structure
 
         public void Insert(string data)
         {
+            fileName = MainfileDirectory + "\\Master.txt";
             using (StreamWriter sw = (File.Exists(fileName)) ? File.AppendText(fileName) : File.CreateText(fileName))
             {
                 sw.WriteLine(data);
@@ -35,7 +36,7 @@ namespace SwineTracker.Data_Structure
 
         public void Update(string updatedData)
         {
-            StreamReader sr = new StreamReader(fileName);
+            StreamReader sr = new StreamReader(MainfileDirectory + fileName);
             string tempName = MainfileDirectory + "\\temp.txt";
             StreamWriter sw = new StreamWriter(tempName);
             newSwine = swineFabric.Distribute(updatedData);
@@ -62,7 +63,7 @@ namespace SwineTracker.Data_Structure
 
         public void Delete(string deleteData)
         {
-            StreamReader sr = new StreamReader(fileName);
+            StreamReader sr = new StreamReader(MainfileDirectory + fileName);
             string tempName = MainfileDirectory + "\\temp.txt";
             StreamWriter sw = new StreamWriter(tempName);
             newSwine = swineFabric.Distribute(deleteData);
@@ -88,9 +89,7 @@ namespace SwineTracker.Data_Structure
 
         public List<Swine> BuscarPorArete(string item)
         {
-            StreamReader sr = new StreamReader(fileName);
-            string tempName = @"D:\\Escritorio\\temp.txt";
-            StreamWriter sw = new StreamWriter(tempName);
+            StreamReader sr = new StreamReader(MainfileDirectory + fileName);
             List<Swine> results = new List<Swine>();
 
             while (!sr.EndOfStream)
@@ -103,8 +102,7 @@ namespace SwineTracker.Data_Structure
                     results.Add(oldSwine);
                 }
             }
-            sr.Close();
-            sw.Close();
+            sr.Close();           
 
             return results;
         }
