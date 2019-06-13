@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SwineTracker.DataStructure;
+using SwineTracker.Data_Structure;
 
 namespace SwineTracker.Vistas
 {
-    public partial class FichasHembras : Form
+    public partial class Ingreso_de_Reemplazos : Form
     {
-        public FichasHembras()
+        public Ingreso_de_Reemplazos()
         {
             InitializeComponent();
         }
@@ -25,16 +27,15 @@ namespace SwineTracker.Vistas
             this.Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Vistas.Actividad a = new Vistas.Actividad();
-            a.Show();
+            Swine swine = new Swine();
+            Main main = new Main();
 
-        }
-
-        public void txtHembra_TextChanged(object sender, EventArgs e)
-        {
-
+            swine.setArete(txtHembra.Text);
+            swine.setFechaIngreso(txtFechaIngreso.Text);
+            swine.setfechaNacimiento(txtFechaNacimiento.Text);
+            main.Insert(swine.ConvertString());
         }
     }
 }

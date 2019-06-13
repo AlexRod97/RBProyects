@@ -38,7 +38,7 @@ namespace SwineTracker.DataStructure
             newSwine.setTotalLechonesMuertos(Convert.ToInt32(items.ElementAt(3)));
             newSwine.setTotalLechonesMomia(Convert.ToInt32(items.ElementAt(4)));
             newSwine.setFechaIngreso(items.ElementAt(5));
-            newSwine.setNumSemanas(Convert.ToInt32(items.ElementAt(6)));
+            newSwine.setfechaNacimiento(items.ElementAt(6));
             newSwine.setComentario(items.ElementAt(7));
 
             DistribuirParto(line);

@@ -95,6 +95,12 @@
     <Compile Include="Vistas\Fichas de Hembras.Designer.cs">
       <DependentUpon>Fichas de Hembras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Ingreso de Reemplazos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Ingreso de Reemplazos.Designer.cs">
+      <DependentUpon>Ingreso de Reemplazos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,8 +148,14 @@
     <EmbeddedResource Include="Vistas\Fichas de Hembras.resx">
       <DependentUpon>Fichas de Hembras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Ingreso de Reemplazos.resx">
+      <DependentUpon>Ingreso de Reemplazos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Menu Principal.resx">
+      <DependentUpon>Menu Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Notificaciones.resx">
       <DependentUpon>Notificaciones.cs</DependentUpon>

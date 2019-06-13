@@ -85,5 +85,12 @@ namespace SwineTracker
         {
             Application.Exit();
         }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            Vistas.Ingreso_de_Reemplazos s = new Vistas.Ingreso_de_Reemplazos();
+            s.Show();
+            this.Visible = false;
+        }
     }
 }

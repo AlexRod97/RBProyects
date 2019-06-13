@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtHembra = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,12 +46,13 @@
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtHembra
             // 
-            this.textBox1.Location = new System.Drawing.Point(31, 124);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtHembra.Location = new System.Drawing.Point(31, 124);
+            this.txtHembra.Name = "txtHembra";
+            this.txtHembra.Size = new System.Drawing.Size(100, 20);
+            this.txtHembra.TabIndex = 0;
+            this.txtHembra.TextChanged += new System.EventHandler(this.txtHembra_TextChanged);
             // 
             // label1
             // 
@@ -182,11 +183,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(436, 123);
+            this.button3.Location = new System.Drawing.Point(405, 126);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(167, 23);
             this.button3.TabIndex = 18;
-            this.button3.Text = "Actividad";
+            this.button3.Text = "Agregar Inseminacion y/o parto";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -210,7 +211,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtHembra);
             this.Name = "FichasHembras";
             this.Text = "Fichas de Hembras";
             this.ResumeLayout(false);
@@ -219,8 +220,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
@@ -236,5 +235,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.TextBox txtHembra;
     }
 }

@@ -15,7 +15,7 @@ namespace SwineTracker.DataStructure
         private int totalLechonesMuertos;
         private int totalLechonesMomias;
         private string fechaIngreso;
-        private int numSemanas;
+        private string fechaNacimiento;
         private string comentario; 
         public List<Birth> partos = new List<Birth>(); 
 
@@ -90,14 +90,14 @@ namespace SwineTracker.DataStructure
             this.fechaIngreso = item;
         }
 
-        public int getNumSemanas()
+        public string getfechaNacimiento()
         {
-            return this.numSemanas;
+            return this.fechaNacimiento;
         }
 
-        public void setNumSemanas(int item)
+        public void setfechaNacimiento(string item)
         {
-            this.numSemanas = item;
+            this.fechaNacimiento = item;
         }
 
         public string getComentario()
@@ -126,7 +126,7 @@ namespace SwineTracker.DataStructure
             line.Append("|");
             line.Append(getFechaIngreso());
             line.Append("|");
-            line.Append(getNumSemanas());
+            line.Append(getfechaNacimiento());
             line.Append("|");
             line.Append(getComentario()); 
             line.Append("|");
