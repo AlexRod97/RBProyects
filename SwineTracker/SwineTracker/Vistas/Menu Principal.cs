@@ -101,5 +101,23 @@ namespace SwineTracker
 
  
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Importador de base de datos";
+            openFileDialog1.Filter = "csv files (*.csv)|*.csv|All files (*.*)|*.*";
+            openFileDialog1.DefaultExt = "csv";
+
+            openFileDialog1.ShowDialog();
+            
+
+            String direccion = openFileDialog1.FileName;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Exportador de base de datos";
+            openFileDialog1.ShowDialog();
+        }
     }
 }
