@@ -268,10 +268,5 @@ namespace SwineTracker.Vistas
                 MessageBox.Show("El número de arete que ingresó no existe");
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

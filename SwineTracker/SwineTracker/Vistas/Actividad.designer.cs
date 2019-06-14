@@ -81,31 +81,93 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(0, 2);
+            this.tabControl1.Controls.Add(this.Inseminacion);
+            this.tabControl1.Controls.Add(this.Preñez);
+            this.tabControl1.Controls.Add(this.Partos);
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(474, 500);
+            this.tabControl1.Size = new System.Drawing.Size(632, 618);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage3
+            // Inseminacion
             // 
-            this.tabPage3.Controls.Add(this.button3);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.label1);
-            this.tabPage3.Controls.Add(this.textBox1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(466, 474);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "Inseminacion y confirmaciones";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            this.Inseminacion.Controls.Add(this.label18);
+            this.Inseminacion.Controls.Add(this.label17);
+            this.Inseminacion.Controls.Add(this.textBox10);
+            this.Inseminacion.Controls.Add(this.label14);
+            this.Inseminacion.Controls.Add(this.textBox1);
+            this.Inseminacion.Controls.Add(this.dateTimePicker1);
+            this.Inseminacion.Controls.Add(this.button3);
+            this.Inseminacion.Controls.Add(this.label4);
+            this.Inseminacion.Controls.Add(this.textBox3);
+            this.Inseminacion.Controls.Add(this.label3);
+            this.Inseminacion.Controls.Add(this.textBox2);
+            this.Inseminacion.Controls.Add(this.label2);
+            this.Inseminacion.Controls.Add(this.label1);
+            this.Inseminacion.Location = new System.Drawing.Point(4, 25);
+            this.Inseminacion.Margin = new System.Windows.Forms.Padding(4);
+            this.Inseminacion.Name = "Inseminacion";
+            this.Inseminacion.Size = new System.Drawing.Size(624, 589);
+            this.Inseminacion.TabIndex = 0;
+            this.Inseminacion.Text = "Inseminacion y confirmaciones";
+            this.Inseminacion.UseVisualStyleBackColor = true;
+            this.Inseminacion.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(80, 304);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(397, 17);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "Añadir al número de lote -(Año vigente) Ejemplo: NumLote-19";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(61, 261);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(109, 17);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "Número de lote:";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(345, 261);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(132, 22);
+            this.textBox10.TabIndex = 10;
+            this.textBox10.Text = "18-2019";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(61, 148);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(119, 17);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Número de arete:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(345, 148);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(132, 22);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.Text = "w150";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(235, 207);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(242, 22);
+            this.dateTimePicker1.TabIndex = 7;
             // 
             // button3
             // 
@@ -292,36 +354,96 @@
             this.label21.TabIndex = 27;
             this.label21.Text = "Número de arete:";
             // 
-            this.textBox1.Location = new System.Drawing.Point(264, 169);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            // textBox4
             // 
-            // tabPage4
+            this.textBox4.Location = new System.Drawing.Point(339, 61);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(243, 22);
+            this.textBox4.TabIndex = 26;
+            this.textBox4.Text = "w150";
             // 
-            this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Controls.Add(this.button2);
-            this.tabPage4.Controls.Add(this.textBox8);
-            this.tabPage4.Controls.Add(this.label12);
-            this.tabPage4.Controls.Add(this.maskedTextBox2);
-            this.tabPage4.Controls.Add(this.label11);
-            this.tabPage4.Controls.Add(this.maskedTextBox1);
-            this.tabPage4.Controls.Add(this.label10);
-            this.tabPage4.Controls.Add(this.textBox7);
-            this.tabPage4.Controls.Add(this.label9);
-            this.tabPage4.Controls.Add(this.textBox6);
-            this.tabPage4.Controls.Add(this.label8);
-            this.tabPage4.Controls.Add(this.textBox5);
-            this.tabPage4.Controls.Add(this.label7);
-            this.tabPage4.Controls.Add(this.textBox4);
-            this.tabPage4.Controls.Add(this.label6);
-            this.tabPage4.Controls.Add(this.label5);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(466, 474);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Partos";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            // maskedTextBox7
+            // 
+            this.maskedTextBox7.Location = new System.Drawing.Point(339, 450);
+            this.maskedTextBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.maskedTextBox7.Name = "maskedTextBox7";
+            this.maskedTextBox7.Size = new System.Drawing.Size(243, 22);
+            this.maskedTextBox7.TabIndex = 25;
+            this.maskedTextBox7.Text = "1,2,3,4,5,6,7,8,9,10";
+            this.maskedTextBox7.ValidatingType = typeof(int);
+            // 
+            // maskedTextBox6
+            // 
+            this.maskedTextBox6.Location = new System.Drawing.Point(339, 394);
+            this.maskedTextBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.maskedTextBox6.Mask = "99999";
+            this.maskedTextBox6.Name = "maskedTextBox6";
+            this.maskedTextBox6.Size = new System.Drawing.Size(243, 22);
+            this.maskedTextBox6.TabIndex = 24;
+            this.maskedTextBox6.Text = "1";
+            this.maskedTextBox6.ValidatingType = typeof(int);
+            // 
+            // maskedTextBox5
+            // 
+            this.maskedTextBox5.Location = new System.Drawing.Point(339, 342);
+            this.maskedTextBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.maskedTextBox5.Mask = "99999";
+            this.maskedTextBox5.Name = "maskedTextBox5";
+            this.maskedTextBox5.Size = new System.Drawing.Size(243, 22);
+            this.maskedTextBox5.TabIndex = 23;
+            this.maskedTextBox5.Text = "1";
+            this.maskedTextBox5.ValidatingType = typeof(int);
+            // 
+            // maskedTextBox4
+            // 
+            this.maskedTextBox4.Location = new System.Drawing.Point(339, 294);
+            this.maskedTextBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.maskedTextBox4.Mask = "99999";
+            this.maskedTextBox4.Name = "maskedTextBox4";
+            this.maskedTextBox4.Size = new System.Drawing.Size(243, 22);
+            this.maskedTextBox4.TabIndex = 22;
+            this.maskedTextBox4.Text = "4";
+            this.maskedTextBox4.ValidatingType = typeof(int);
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(339, 246);
+            this.maskedTextBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.maskedTextBox3.Mask = "99999";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(243, 22);
+            this.maskedTextBox3.TabIndex = 21;
+            this.maskedTextBox3.Text = "6";
+            this.maskedTextBox3.ValidatingType = typeof(int);
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(339, 192);
+            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.maskedTextBox2.Mask = "99999";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(243, 22);
+            this.maskedTextBox2.TabIndex = 20;
+            this.maskedTextBox2.Text = "8";
+            this.maskedTextBox2.ValidatingType = typeof(int);
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(339, 101);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(243, 22);
+            this.dateTimePicker3.TabIndex = 19;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(120, 107);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(108, 17);
+            this.label20.TabIndex = 18;
+            this.label20.Text = "Fecha de parto:";
             // 
             // label13
             // 
@@ -343,13 +465,6 @@
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(254, 362);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 12;
             // 
             // label12
             // 
