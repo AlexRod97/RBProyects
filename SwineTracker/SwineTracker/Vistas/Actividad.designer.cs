@@ -578,6 +578,7 @@
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Actividad";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Actividad";
             this.tabControl1.ResumeLayout(false);
             this.Inseminacion.ResumeLayout(false);

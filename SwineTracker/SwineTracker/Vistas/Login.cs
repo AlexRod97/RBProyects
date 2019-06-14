@@ -40,5 +40,10 @@ namespace SwineTracker.Vistas
             mp.Show();
             this.Visible = false;           
         }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
