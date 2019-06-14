@@ -47,7 +47,7 @@ namespace SwineTracker
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dataStructure.Update(textBox2.Text);
+            //dataStructure.Update(textBox2.Text);
             MessageBox.Show("Actualizado");
         }
 

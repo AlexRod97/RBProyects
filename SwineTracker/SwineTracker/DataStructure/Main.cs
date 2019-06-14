@@ -34,12 +34,13 @@ namespace SwineTracker.DataStructure
             }
         }
 
-        public void Update(string updatedData)
+        public void Update(Swine updatedData)
         {
-            StreamReader sr = new StreamReader(MainfileDirectory + fileName);
+            string oldName = MainfileDirectory + fileName;
+            StreamReader sr = new StreamReader(oldName);
             string tempName = MainfileDirectory + "\\temp.txt";
             StreamWriter sw = new StreamWriter(tempName);
-            newSwine = swineFabric.Distribute(updatedData);
+            newSwine = updatedData;
 
             while (!sr.EndOfStream)
             {
@@ -52,13 +53,13 @@ namespace SwineTracker.DataStructure
                 }
                 else if (newSwine.getArete() == oldSwine.getArete())
                 {
-                    sw.WriteLine(updatedData);
+                    sw.WriteLine(newSwine.ConvertString());
                 }
             }
             sr.Close();
             sw.Close();
-            File.Delete(fileName);
-            File.Move(tempName, fileName);
+            File.Delete(oldName);
+            File.Move(tempName, oldName);
         }
 
         public void Delete(string deleteData)
@@ -105,6 +106,38 @@ namespace SwineTracker.DataStructure
             sr.Close();           
 
             return results;
+        }
+
+        public Swine ExisteArete(string item)
+        {
+            StreamReader sr = new StreamReader(MainfileDirectory + fileName);
+            Swine result = new Swine();
+
+            try
+            {
+                while (!sr.EndOfStream)
+                {
+                    string line = sr.ReadLine();
+                    oldSwine = swineFabric.Distribute(line);
+
+                    if (oldSwine.getArete().Equals(item))
+                    {
+                        result = oldSwine;
+                        break;
+                    }
+                    else
+                    {
+                        result = null;
+                    }
+                }
+                sr.Close();
+            }
+            catch (Exception)
+            {
+                result = null; 
+            }
+
+            return result;
         }
     }
 }

@@ -9,14 +9,13 @@ namespace SwineTracker.DataStructure
     public class Swine
     {
         private string arete;
-        private string lote; 
         private int totalPartos;
         private int totalLechonesVivos;
         private int totalLechonesMuertos;
         private int totalLechonesMomias;
-        private string fechaIngreso;
-        private string fechaNacimiento;
-        private string comentario; 
+        private string fechaIngreso = "-";
+        private string fechaNacimiento = "-";
+        private string comentario = "-";
         public List<Birth> partos = new List<Birth>(); 
 
         public string getArete()
@@ -28,17 +27,7 @@ namespace SwineTracker.DataStructure
         {
             this.arete = item;
         }
-
-        public string getLote()
-        {
-            return this.lote; 
-        }
-
-        public void setLote(string item)
-        {
-            this.lote = item;
-        }
-
+        
         public int getTotalPartos()
         {
             return this.totalPartos;
@@ -51,7 +40,7 @@ namespace SwineTracker.DataStructure
 
         public int getTotalLechonesVivos()
         {
-            return this.totalPartos;
+            return this.totalLechonesVivos;
         }
 
         public void setTotalLechonesVivos(int item)
@@ -114,6 +103,7 @@ namespace SwineTracker.DataStructure
         {
             StringBuilder line = new StringBuilder();
 
+            line.Append("#");
             line.Append(getArete());
             line.Append("|");
             line.Append(getTotalPartos());
@@ -130,6 +120,7 @@ namespace SwineTracker.DataStructure
             line.Append("|");
             line.Append(getComentario()); 
             line.Append("|");
+            line.Append("#");
 
             for (int i = 0; i < partos.Count; i++)
             {

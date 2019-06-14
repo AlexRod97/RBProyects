@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SwineTracker.DataStructure
 {
@@ -50,19 +51,20 @@ namespace SwineTracker.DataStructure
                 items = partos.ElementAt(i).Split('|');
 
                 newBirth.setFechaInseminacion(items.ElementAt(0));
-                newBirth.setFechaConfirmacion21(items.ElementAt(1));
-                newBirth.setFechaConfirmacion28(items.ElementAt(2));
-                newBirth.setFechaFalsaPreniez(items.ElementAt(3));
-                newBirth.setFechaPosibleParto(items.ElementAt(4));
-                newBirth.setFechaParto(items.ElementAt(5));
-                newBirth.setTotalMachos(Convert.ToInt32(items.ElementAt(6)));
-                newBirth.setTotalHembras(Convert.ToInt32(items.ElementAt(7)));
-                newBirth.setTotalNacidos(Convert.ToInt32(items.ElementAt(8)));
-                newBirth.setNacidosVivos(Convert.ToInt32(items.ElementAt(9)));
-                newBirth.setNacidosMuertos(Convert.ToInt32(items.ElementAt(10)));
-                newBirth.setNacidosMomias(Convert.ToInt32(items.ElementAt(11)));
+                newBirth.setLote(items.ElementAt(1));
+                newBirth.setFechaConfirmacion21(items.ElementAt(2));
+                newBirth.setFechaConfirmacion28(items.ElementAt(3));
+                newBirth.setFechaFalsaPreniez(items.ElementAt(4));
+                newBirth.setFechaPosibleParto(items.ElementAt(5));
+                newBirth.setFechaParto(items.ElementAt(6));
+                newBirth.setTotalMachos(Convert.ToInt32(items.ElementAt(7)));
+                newBirth.setTotalHembras(Convert.ToInt32(items.ElementAt(8)));
+                newBirth.setTotalNacidos(Convert.ToInt32(items.ElementAt(9)));
+                newBirth.setNacidosVivos(Convert.ToInt32(items.ElementAt(10)));
+                newBirth.setNacidosMuertos(Convert.ToInt32(items.ElementAt(11)));
+                newBirth.setNacidosMomias(Convert.ToInt32(items.ElementAt(12)));
                 string temp = items.ElementAt(12);
-                var pesosTemp = temp.Split(',');
+                var pesosTemp = temp.Split(',');                
 
                 for (int j = 0; j < pesosTemp.Count(); j++)
                 {
@@ -111,8 +113,9 @@ namespace SwineTracker.DataStructure
 
             count = 0;
             int firstPos = 0, endPos = 1;
+            int contador = positions.Count / 2;
 
-            for (int i = 0; i < positions.Count/2; i++)
+            for (int i = 0; i < contador; i++)
             {
                 int start, end;
 
@@ -126,9 +129,8 @@ namespace SwineTracker.DataStructure
                 firstPos = firstPos + 2;
                 endPos = endPos + 2;
                 partos.Add(result.ToString());
-                result.Clear();
-            }
-           // DistribuirPesos();
+                result.Clear();              
+            }           
         }   
       
        

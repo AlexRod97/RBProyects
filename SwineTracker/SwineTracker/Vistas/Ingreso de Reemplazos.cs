@@ -31,7 +31,7 @@ namespace SwineTracker.Vistas
             Swine swine = new Swine();
             Main main = new Main();
 
-            swine.setArete(txtHembra.Text);
+            swine.setArete(txtHembra.Text.ToUpper());
             swine.setFechaIngreso(txtFechaIngreso.Text);
             swine.setfechaNacimiento(txtFechaNacimiento.Text);
             main.Insert(swine.ConvertString());

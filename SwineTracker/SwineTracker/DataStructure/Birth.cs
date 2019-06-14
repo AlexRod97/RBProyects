@@ -8,12 +8,13 @@ namespace SwineTracker.DataStructure
 {
     public class Birth
     {
-        private string fechaInseminacion;
-        private string fechaConfirmacion21;
-        private string fechaConfirmacion28;
-        private string fechaFalsaPreniez;
-        private string fechaPosibleParto;
-        private string fechaParto;
+        private string fechaInseminacion = "-";
+        private string lote = "-"; 
+        private string fechaConfirmacion21 = "-";
+        private string fechaConfirmacion28 = "-";
+        private string fechaFalsaPreniez = "-";
+        private string fechaPosibleParto = "-";
+        private string fechaParto = "-";
         private int totalNacidos;
         private int totalMachos;
         private int totalHembras;
@@ -31,6 +32,16 @@ namespace SwineTracker.DataStructure
         public void setFechaInseminacion(string item)
         {
             this.fechaInseminacion = item;
+        }
+
+        public string getLote()
+        {
+            return this.lote;
+        }
+
+        public void setLote(string item)
+        {
+            this.lote = item;
         }
 
         public string getFechaConfirmacion21()
@@ -152,6 +163,8 @@ namespace SwineTracker.DataStructure
 
             line.Append(getFechaInseminacion());
             line.Append("|");
+            line.Append(getLote());
+            line.Append("|");
             line.Append(getFechaConfirmacion21());
             line.Append("|");
             line.Append(getFechaConfirmacion28());
@@ -174,6 +187,7 @@ namespace SwineTracker.DataStructure
             line.Append("|");
             line.Append(getNacidosMomias());
             line.Append("|");
+
             for (int i = 0; i < pesos.Count; i++)
             {
                 if (i + 1 < pesos.Count)
