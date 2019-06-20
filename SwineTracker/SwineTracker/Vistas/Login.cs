@@ -11,7 +11,7 @@ using SwineTracker.DataStructure;
 
 namespace SwineTracker.Vistas
 {
-    public partial class Login : Form
+    public partial class Login : MetroFramework.Forms.MetroForm
     {
         Main dataStructure = new Main();
 
@@ -36,14 +36,30 @@ namespace SwineTracker.Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuPrincipal mp = new MenuPrincipal();
-            mp.Show();
-            this.Visible = false;           
+                    
         }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            relocate();
+        }
+
+        public void relocate()
+        {
+            Size desktopSize = System.Windows.Forms.SystemInformation.PrimaryMonitorSize;
+            //ParentPanel.Size = desktopSize;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MenuPrincipal mp = new MenuPrincipal();
+            mp.Show();
+            this.Visible = false;
         }
     }
 }
