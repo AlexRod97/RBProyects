@@ -71,8 +71,8 @@ namespace SwineTracker
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Vistas.Login s = new Vistas.Login();
-            s.Show();
+            Vistas.Login sw = new Vistas.Login();
+            sw.Show();
             this.Visible = false;
         }
 

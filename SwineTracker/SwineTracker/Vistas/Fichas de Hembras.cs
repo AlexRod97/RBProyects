@@ -36,5 +36,17 @@ namespace SwineTracker.Vistas
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cbPartos.Items.Clear();
+            DataStructure.Main main = new DataStructure.Main();
+            var hembra = main.ExisteArete(txtArete.Text);
+            cbPartos.Items.Add("General");
+            for (int i = 1; i <= hembra.getTotalPartos(); i++)
+            {
+                cbPartos.Items.Add(i.ToString());
+            }
+        }
     }
 }

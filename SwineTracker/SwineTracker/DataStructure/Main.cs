@@ -31,7 +31,9 @@ namespace SwineTracker.DataStructure
             using (StreamWriter sw = (File.Exists(fileName)) ? File.AppendText(fileName) : File.CreateText(fileName))
             {
                 sw.WriteLine(data);
+                sw.Close();
             }
+            
         }
 
         public void Update(Swine updatedData)

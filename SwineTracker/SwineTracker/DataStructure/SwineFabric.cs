@@ -43,9 +43,11 @@ namespace SwineTracker.DataStructure
             newSwine.setComentario(items.ElementAt(7));
 
             DistribuirParto(line);
+            newSwine.partos.Clear();
 
             for (int i = 0; i < partos.Count; i++)
             {
+
                 Birth newBirth = new Birth();
                 items.DefaultIfEmpty(); 
                 items = partos.ElementAt(i).Split('|');
