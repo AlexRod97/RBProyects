@@ -10,9 +10,7 @@ namespace SwineTracker.DataStructure
     public class SwineFabric
     {
         List<string> elements = new List<string>();
-        List<string> partos = new List<string>();
-        List<string> partoComplement = new List<string>();
-       
+
         private string getSubstring(int start, int end, string line)
         {
             StringBuilder result = new StringBuilder();
@@ -42,38 +40,7 @@ namespace SwineTracker.DataStructure
             newSwine.setfechaNacimiento(items.ElementAt(6));
             newSwine.setComentario(items.ElementAt(7));
 
-            DistribuirParto(line);
-            newSwine.partos.Clear();
-
-            for (int i = 0; i < partos.Count; i++)
-            {
-
-                Birth newBirth = new Birth();
-                items.DefaultIfEmpty(); 
-                items = partos.ElementAt(i).Split('|');
-
-                newBirth.setFechaInseminacion(items.ElementAt(0));
-                newBirth.setLote(items.ElementAt(1));
-                newBirth.setFechaConfirmacion21(items.ElementAt(2));
-                newBirth.setFechaConfirmacion28(items.ElementAt(3));
-                newBirth.setFechaFalsaPreniez(items.ElementAt(4));
-                newBirth.setFechaPosibleParto(items.ElementAt(5));
-                newBirth.setFechaParto(items.ElementAt(6));
-                newBirth.setTotalMachos(Convert.ToInt32(items.ElementAt(7)));
-                newBirth.setTotalHembras(Convert.ToInt32(items.ElementAt(8)));
-                newBirth.setTotalNacidos(Convert.ToInt32(items.ElementAt(9)));
-                newBirth.setNacidosVivos(Convert.ToInt32(items.ElementAt(10)));
-                newBirth.setNacidosMuertos(Convert.ToInt32(items.ElementAt(11)));
-                newBirth.setNacidosMomias(Convert.ToInt32(items.ElementAt(12)));
-                string temp = items.ElementAt(12);
-                var pesosTemp = temp.Split(',');                
-
-                for (int j = 0; j < pesosTemp.Count(); j++)
-                {
-                    newBirth.pesos.Add(Convert.ToInt32(pesosTemp.ElementAt(j)));
-                }
-                newSwine.partos.Add(newBirth);
-            }
+            newSwine.partos = DistribuirParto(line);
 
             return newSwine;
         }
@@ -98,11 +65,14 @@ namespace SwineTracker.DataStructure
             return result;
         }
 
-        private void DistribuirParto(string line)
+        private List<Birth> DistribuirParto(string line)
         {
             int count = 0;
             List<int> positions = new List<int>();
             StringBuilder result = new StringBuilder();
+            List<Birth> BirthList = new List<Birth>();
+            List<string> partos = new List<string>();
+            List<string> partoComplement = new List<string>();
 
             foreach (char item in line)
             {
@@ -131,10 +101,41 @@ namespace SwineTracker.DataStructure
                 firstPos = firstPos + 2;
                 endPos = endPos + 2;
                 partos.Add(result.ToString());
-                result.Clear();              
-            }           
-        }   
-      
-       
+                result.Clear();
+            }
+
+            for (int i = 0; i < partos.Count; i++)
+            {
+
+                Birth newBirth = new Birth();
+                var items = partos.ElementAt(i).Split('|');
+
+                newBirth.setFechaInseminacion(items.ElementAt(0));
+                newBirth.setLote(items.ElementAt(1));
+                newBirth.setFechaConfirmacion21(items.ElementAt(2));
+                newBirth.setFechaConfirmacion28(items.ElementAt(3));
+                newBirth.setFechaFalsaPreniez(items.ElementAt(4));
+                newBirth.setFechaPosibleParto(items.ElementAt(5));
+                newBirth.setFechaParto(items.ElementAt(6));
+                newBirth.setTotalMachos(Convert.ToInt32(items.ElementAt(7)));
+                newBirth.setTotalHembras(Convert.ToInt32(items.ElementAt(8)));
+                newBirth.setTotalNacidos(Convert.ToInt32(items.ElementAt(9)));
+                newBirth.setNacidosVivos(Convert.ToInt32(items.ElementAt(10)));
+                newBirth.setNacidosMuertos(Convert.ToInt32(items.ElementAt(11)));
+                newBirth.setNacidosMomias(Convert.ToInt32(items.ElementAt(12)));
+                string temp = items.ElementAt(13);
+                var pesosTemp = temp.Split(',');
+
+                for (int j = 0; j < pesosTemp.Count(); j++)
+                {
+                    newBirth.pesos.Add(Convert.ToInt32(pesosTemp.ElementAt(j)));
+                }
+                BirthList.Add(newBirth);
+            }
+
+            return BirthList;
+        }
+
+
     }
 }

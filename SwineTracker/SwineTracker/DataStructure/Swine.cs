@@ -130,6 +130,14 @@ namespace SwineTracker.DataStructure
             return line.ToString();
         }
 
+        public double PesoPromedio(Swine hembra)
+        {
+            
+            return 0;
+        }
+
+
+
     }
 
 }

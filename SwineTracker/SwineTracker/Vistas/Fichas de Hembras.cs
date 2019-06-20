@@ -14,7 +14,21 @@ namespace SwineTracker.Vistas
     {
         public FichasHembras()
         {
+            DataTable table = new DataTable();
+            DataColumn dc;
+            DataRow dr;
+            
+            table.Columns.Add("Arete", typeof(string));
+            table.Columns.Add("Numero de Partos", typeof(int));
+            table.Columns.Add("Vivos", typeof(int));
+            table.Columns.Add("Muertos", typeof(int));
+            table.Columns.Add("Momias", typeof(int));
+            table.Columns.Add("Pesos", typeof(string));
+            table.Columns.Add("Peso Promedio", typeof(double));
+            table.Columns.Add("Promedio Lechones por parto", typeof(double));
+            
             InitializeComponent();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -39,6 +53,7 @@ namespace SwineTracker.Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             cbPartos.Items.Clear();
             DataStructure.Main main = new DataStructure.Main();
             var hembra = main.ExisteArete(txtArete.Text);
@@ -47,6 +62,8 @@ namespace SwineTracker.Vistas
             {
                 cbPartos.Items.Add(i.ToString());
             }
+            
+
         }
     }
 }

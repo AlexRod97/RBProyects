@@ -44,14 +44,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Arete = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalVivos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalMuertos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalMomias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pesos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PesoPromedio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PromedioLechones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Partos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -195,59 +187,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Arete,
-            this.TotalVivos,
-            this.TotalMuertos,
-            this.TotalMomias,
-            this.Pesos,
-            this.PesoPromedio,
-            this.PromedioLechones,
-            this.Partos});
             this.dataGridView1.Location = new System.Drawing.Point(50, 239);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(677, 247);
             this.dataGridView1.TabIndex = 18;
-            // 
-            // Arete
-            // 
-            this.Arete.HeaderText = "Arete";
-            this.Arete.Name = "Arete";
-            // 
-            // TotalVivos
-            // 
-            this.TotalVivos.HeaderText = "Tota de Vivos";
-            this.TotalVivos.Name = "TotalVivos";
-            // 
-            // TotalMuertos
-            // 
-            this.TotalMuertos.HeaderText = "Total de Muertos";
-            this.TotalMuertos.Name = "TotalMuertos";
-            // 
-            // TotalMomias
-            // 
-            this.TotalMomias.HeaderText = "Total de Momias";
-            this.TotalMomias.Name = "TotalMomias";
-            // 
-            // Pesos
-            // 
-            this.Pesos.HeaderText = "Pesos";
-            this.Pesos.Name = "Pesos";
-            // 
-            // PesoPromedio
-            // 
-            this.PesoPromedio.HeaderText = "Peso Promedio";
-            this.PesoPromedio.Name = "PesoPromedio";
-            // 
-            // PromedioLechones
-            // 
-            this.PromedioLechones.HeaderText = "Promedio de lechones por parto";
-            this.PromedioLechones.Name = "PromedioLechones";
-            // 
-            // Partos
-            // 
-            this.Partos.HeaderText = "Numero de Partos";
-            this.Partos.Name = "Partos";
             // 
             // textBox1
             // 
@@ -304,14 +247,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Arete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalVivos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalMuertos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalMomias;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pesos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PesoPromedio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PromedioLechones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Partos;
         private System.Windows.Forms.TextBox textBox1;
     }
 }
