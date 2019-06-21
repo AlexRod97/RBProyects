@@ -93,6 +93,7 @@
             // 
             // Inseminacion
             // 
+            this.Inseminacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Inseminacion.Controls.Add(this.label18);
             this.Inseminacion.Controls.Add(this.label17);
             this.Inseminacion.Controls.Add(this.textBox10);
@@ -112,7 +113,6 @@
             this.Inseminacion.Size = new System.Drawing.Size(624, 589);
             this.Inseminacion.TabIndex = 0;
             this.Inseminacion.Text = "Inseminacion y confirmaciones";
-            this.Inseminacion.UseVisualStyleBackColor = true;
             this.Inseminacion.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // label18
@@ -573,6 +573,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(631, 668);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
@@ -580,6 +581,7 @@
             this.Name = "Actividad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Actividad";
+            this.Load += new System.EventHandler(this.Actividad_Load);
             this.tabControl1.ResumeLayout(false);
             this.Inseminacion.ResumeLayout(false);
             this.Inseminacion.PerformLayout();

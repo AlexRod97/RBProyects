@@ -153,6 +153,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Vistas\Actividad.resx">
       <DependentUpon>Actividad.cs</DependentUpon>
@@ -160,8 +161,17 @@
     <EmbeddedResource Include="Vistas\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Comparativa por fechas.resx">
+      <DependentUpon>Comparativa por fechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Comparativa por hembra.resx">
+      <DependentUpon>Comparativa por hembra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\DeBaja.resx">
       <DependentUpon>DeBaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Fechas de confirmacion.resx">
+      <DependentUpon>Fechas de confirmacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Fichas de Hembras.resx">
       <DependentUpon>Fichas de Hembras.cs</DependentUpon>
@@ -199,7 +209,45 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\" />
+    <None Include="Resources\notificaciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fichasConfirmacion.png" />
+    <None Include="Resources\fichaHembras.png" />
+    <None Include="Resources\exportarBase.png" />
+    <None Include="Resources\destete.png" />
+    <None Include="Resources\comparativaHembras.png" />
+    <None Include="Resources\comparativaFechas.png" />
+    <None Include="Resources\cerrarSesion.png" />
+    <None Include="Resources\cargarBase.png" />
+    <None Include="Resources\barraBotones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proyeccionPartos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TwinBackground.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

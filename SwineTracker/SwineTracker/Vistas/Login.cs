@@ -11,7 +11,7 @@ using SwineTracker.DataStructure;
 
 namespace SwineTracker.Vistas
 {
-    public partial class Login : MetroFramework.Forms.MetroForm
+    public partial class Login : Form
     {
         Main dataStructure = new Main();
 
@@ -33,12 +33,7 @@ namespace SwineTracker.Vistas
             }
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-                    
-        }
-
+       
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -51,15 +46,55 @@ namespace SwineTracker.Vistas
 
         public void relocate()
         {
-            Size desktopSize = System.Windows.Forms.SystemInformation.PrimaryMonitorSize;
-            //ParentPanel.Size = desktopSize;
+            //White.Height = this.Height;
+            //White.Width = this.Width / 2;
+
+            //Dark.Height = this.Height;
+            //Dark.Width = this.Width / 2;
+
+        }      
+
+        private void Login_ResizeEnd(object sender, EventArgs e)
+        {
+            relocate();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void LoginBtn_Click(object sender, EventArgs e)
         {
             MenuPrincipal mp = new MenuPrincipal();
             mp.Show();
             this.Visible = false;
+        }
+
+
+        #region Hover-leave
+
+
+        #endregion
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void LoginBtn_MouseHover(object sender, EventArgs e)
+        {
+            LoginBtn.Size = new Size(175, 55);  
+        }
+
+        private void LoginBtn_MouseLeave(object sender, EventArgs e)
+        {
+            LoginBtn.Size = new Size(170, 50);
         }
     }
 }
