@@ -19,7 +19,7 @@ namespace SwineTracker
 
         private void Menu_Principal_Load(object sender, EventArgs e)
         {
-
+           // Relocate();
         }
 
         private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -119,6 +119,23 @@ namespace SwineTracker
         {
             openFileDialog1.Title = "Exportador de base de datos";
             openFileDialog1.ShowDialog();
+        }
+
+        private void Relocate()
+        {
+            HeaderPanel.Left = (this.ClientSize.Width - HeaderPanel.Width) / 2 ;
+            HeaderPanel.Top = (this.ClientSize.Height - HeaderPanel.Height) / 2 -125;
+
+            Logo.Top = (this.ClientSize.Width /4 - Logo.Height) - 250;
+            Logo.BringToFront();
+
+            FooterPanel.Left = (this.ClientSize.Width - FooterPanel.Width) / 2;
+            FooterPanel.Top = (this.ClientSize.Height - FooterPanel.Height) / 2 + 50;
+
+            btnCargarDatos.Top = (this.ClientSize.Height - 165);
+            btnSesion.Top = (this.ClientSize.Height - 100);
+            btnSesion.Left = (this.ClientSize.Width - 207);
+            btnExportarDatos.Top = (this.ClientSize.Height - 100);
         }
 
         #region Hover-Leave
@@ -254,5 +271,10 @@ namespace SwineTracker
         }
 
         #endregion
+
+        private void MenuPrincipal_Resize(object sender, EventArgs e)
+        {
+            Relocate();
+        }
     }
 }
