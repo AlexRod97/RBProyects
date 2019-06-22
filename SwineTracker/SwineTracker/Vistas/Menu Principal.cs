@@ -17,6 +17,8 @@ namespace SwineTracker
         public MenuPrincipal()
         {
             InitializeComponent();
+            this.MaximumSize = new Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.WorkingArea.Height);
+
         }
 
         private void Menu_Principal_Load(object sender, EventArgs e)
