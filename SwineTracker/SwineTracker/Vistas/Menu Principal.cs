@@ -12,6 +12,8 @@ namespace SwineTracker
 {
     public partial class MenuPrincipal : Form
     {
+        private bool flag = true;
+
         public MenuPrincipal()
         {
             InitializeComponent();
@@ -31,50 +33,49 @@ namespace SwineTracker
         {
             Vistas.Ingreso_de_Reemplazos s = new Vistas.Ingreso_de_Reemplazos();
             s.Show();
-            this.Visible = false;
+           // this.SendToBack();
         }
 
         private void btnInseminacion_Click(object sender, EventArgs e)
         {
             Vistas.Actividad actividad = new Vistas.Actividad();
             actividad.Show();
-            this.Visible = false;
+           // this.SendToBack();
         }
 
         private void btnFichas_Click(object sender, EventArgs e)
         {
             Vistas.FichasHembras fh = new Vistas.FichasHembras();
             fh.Show();
-            this.Visible = false;
-
+           // this.SendToBack();
         }
 
         private void btnComparativaH_Click(object sender, EventArgs e)
         {
             Vistas.Comparativa_por_hembra ch = new Vistas.Comparativa_por_hembra();
             ch.Show();
-            this.Visible = false;
+            //this.SendToBack();
         }
 
         private void btnComparativaF_Click(object sender, EventArgs e)
         {
             Vistas.Comparativa_por_fechas cf = new Vistas.Comparativa_por_fechas();
             cf.Show();
-            this.Visible = false;
+            //this.SendToBack();
         }
 
         private void btnFechaConfirmacion_Click(object sender, EventArgs e)
         {
             Vistas.Fechas_de_confirmacion fc = new Vistas.Fechas_de_confirmacion();
             fc.Show();
-            this.Visible = false;
+          //  this.SendToBack();
         }
 
         private void btnProyeccion_Click(object sender, EventArgs e)
         {
             Vistas.Proyeccion_de_partos pp = new Vistas.Proyeccion_de_partos();
             pp.Show();
-            this.Visible = false;
+           // this.SendToBack();
         }
 
         private void btnDestete_Click(object sender, EventArgs e)
@@ -86,7 +87,7 @@ namespace SwineTracker
         {
             Vistas.Notificaciones n = new Vistas.Notificaciones();
             n.Show();
-            this.Visible = false;
+           // this.SendToBack();
         }
 
         private void btnBajas_Click(object sender, EventArgs e)
@@ -99,7 +100,7 @@ namespace SwineTracker
         {
             Vistas.Login sw = new Vistas.Login();
             sw.Show();
-            this.Visible = false;
+            this.Close();
         }
 
         private void btnCargarDatos_Click(object sender, EventArgs e)
@@ -136,6 +137,10 @@ namespace SwineTracker
             btnSesion.Top = (this.ClientSize.Height - 100);
             btnSesion.Left = (this.ClientSize.Width - 207);
             btnExportarDatos.Top = (this.ClientSize.Height - 100);
+
+            btnClose.Left = (this.ClientSize.Width - 37);
+            btnMax.Left = (this.btnClose.Left - 35);
+            btnMin.Left = (this.btnMax.Left - 35);
         }
 
         #region Hover-Leave
@@ -275,6 +280,66 @@ namespace SwineTracker
         private void MenuPrincipal_Resize(object sender, EventArgs e)
         {
             Relocate();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            if (flag)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                flag = !flag;
+            }
+            else
+            {
+                this.MinimizeBox = true;
+                flag = !flag;
+            }
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnClose_MouseHover(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Red;
+            btnClose.Size = new Size(30, 30);
+        }
+
+        private void btnMax_MouseHover(object sender, EventArgs e)
+        {
+            btnMax.BackColor = Color.LightGray;
+            btnMax.Size = new Size(30, 30);
+        }
+
+        private void btnMin_MouseHover(object sender, EventArgs e)
+        {
+            btnMin.BackColor = Color.LightGray;
+            btnMin.Size = new Size(30, 30);
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Transparent;
+            btnClose.Size = new Size(25, 25);
+        }
+
+        private void btnMax_MouseLeave(object sender, EventArgs e)
+        {
+            btnMax.BackColor = Color.Transparent;
+            btnMax.Size = new Size(25, 25);
+        }
+
+        private void btnMin_MouseLeave(object sender, EventArgs e)
+        {
+            btnMin.BackColor = Color.Transparent;
+            btnMin.Size = new Size(25, 25);
         }
     }
 }

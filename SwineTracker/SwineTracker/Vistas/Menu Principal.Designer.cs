@@ -49,6 +49,9 @@
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.FooterPanel = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.PictureBox();
+            this.btnMax = new System.Windows.Forms.PictureBox();
+            this.btnMin = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BtnRemplazos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInseminacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFichas)).BeginInit();
@@ -66,6 +69,9 @@
             this.HeaderPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.FooterPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -297,6 +303,9 @@
             // 
             // MainPanel
             // 
+            this.MainPanel.Controls.Add(this.btnMin);
+            this.MainPanel.Controls.Add(this.btnMax);
+            this.MainPanel.Controls.Add(this.btnClose);
             this.MainPanel.Controls.Add(this.FooterPanel);
             this.MainPanel.Controls.Add(this.HeaderPanel);
             this.MainPanel.Controls.Add(this.Logo);
@@ -322,6 +331,45 @@
             this.FooterPanel.Size = new System.Drawing.Size(1086, 152);
             this.FooterPanel.TabIndex = 47;
             // 
+            // btnClose
+            // 
+            this.btnClose.Image = global::SwineTracker.Properties.Resources.cerrar;
+            this.btnClose.Location = new System.Drawing.Point(1095, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(25, 25);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnClose.TabIndex = 48;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
+            this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Image = global::SwineTracker.Properties.Resources.maximizar;
+            this.btnMax.Location = new System.Drawing.Point(1065, 12);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(25, 25);
+            this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnMax.TabIndex = 49;
+            this.btnMax.TabStop = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMaximizar_Click);
+            this.btnMax.MouseLeave += new System.EventHandler(this.btnMax_MouseLeave);
+            this.btnMax.MouseHover += new System.EventHandler(this.btnMax_MouseHover);
+            // 
+            // btnMin
+            // 
+            this.btnMin.Image = global::SwineTracker.Properties.Resources.minimizar;
+            this.btnMin.Location = new System.Drawing.Point(1035, 12);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(25, 25);
+            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnMin.TabIndex = 50;
+            this.btnMin.TabStop = false;
+            this.btnMin.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.btnMin.MouseLeave += new System.EventHandler(this.btnMin_MouseLeave);
+            this.btnMin.MouseHover += new System.EventHandler(this.btnMin_MouseHover);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -330,10 +378,12 @@
             this.ClientSize = new System.Drawing.Size(1132, 610);
             this.Controls.Add(this.MainPanel);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.Menu_Principal_Load);
             this.Resize += new System.EventHandler(this.MenuPrincipal_Resize);
@@ -356,6 +406,9 @@
             this.MainPanel.ResumeLayout(false);
             this.FooterPanel.ResumeLayout(false);
             this.FooterPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,6 +435,9 @@
         private System.Windows.Forms.Panel HeaderPanel;
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Panel FooterPanel;
+        private System.Windows.Forms.PictureBox btnMin;
+        private System.Windows.Forms.PictureBox btnMax;
+        private System.Windows.Forms.PictureBox btnClose;
     }
 }
 

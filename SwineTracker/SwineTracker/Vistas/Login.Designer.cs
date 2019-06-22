@@ -58,6 +58,8 @@
             this.btnMin.TabIndex = 7;
             this.btnMin.TabStop = false;
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            this.btnMin.MouseLeave += new System.EventHandler(this.btnMin_MouseLeave);
+            this.btnMin.MouseHover += new System.EventHandler(this.btnMin_MouseHover);
             // 
             // btnMax
             // 
@@ -70,6 +72,8 @@
             this.btnMax.TabIndex = 6;
             this.btnMax.TabStop = false;
             this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
+            this.btnMax.MouseLeave += new System.EventHandler(this.btnMax_MouseLeave);
+            this.btnMax.MouseHover += new System.EventHandler(this.btnMax_MouseHover);
             // 
             // btnClose
             // 
@@ -82,6 +86,8 @@
             this.btnClose.TabIndex = 5;
             this.btnClose.TabStop = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
+            this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
             // 
             // Logo
             // 
@@ -102,7 +108,7 @@
             // 
             // 
             this.UsernameTxt.CustomButton.Image = null;
-            this.UsernameTxt.CustomButton.Location = new System.Drawing.Point(166, 1);
+            this.UsernameTxt.CustomButton.Location = new System.Drawing.Point(216, 1);
             this.UsernameTxt.CustomButton.Name = "";
             this.UsernameTxt.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.UsernameTxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -140,7 +146,7 @@
             // 
             // 
             this.PassordTxt.CustomButton.Image = null;
-            this.PassordTxt.CustomButton.Location = new System.Drawing.Point(166, 1);
+            this.PassordTxt.CustomButton.Location = new System.Drawing.Point(216, 1);
             this.PassordTxt.CustomButton.Name = "";
             this.PassordTxt.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.PassordTxt.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;

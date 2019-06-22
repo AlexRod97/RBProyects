@@ -33,7 +33,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.cbPartos = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,7 +50,7 @@
             // txtArete
             // 
             this.txtArete.Location = new System.Drawing.Point(41, 153);
-            this.txtArete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtArete.Margin = new System.Windows.Forms.Padding(4);
             this.txtArete.Name = "txtArete";
             this.txtArete.Size = new System.Drawing.Size(132, 22);
             this.txtArete.TabIndex = 0;
@@ -70,7 +69,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(197, 153);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 2;
@@ -82,7 +81,7 @@
             // 
             this.cbPartos.FormattingEnabled = true;
             this.cbPartos.Location = new System.Drawing.Point(335, 155);
-            this.cbPartos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbPartos.Margin = new System.Windows.Forms.Padding(4);
             this.cbPartos.Name = "cbPartos";
             this.cbPartos.Size = new System.Drawing.Size(160, 24);
             this.cbPartos.TabIndex = 8;
@@ -97,17 +96,6 @@
             this.label9.Size = new System.Drawing.Size(226, 29);
             this.label9.TabIndex = 14;
             this.label9.Text = "Seleccione Hembra";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(907, 750);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 28);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Menu Principal";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label11
             // 
@@ -203,7 +191,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(67, 294);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(903, 304);
             this.dataGridView1.TabIndex = 18;
@@ -211,7 +199,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(140, 624);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(761, 80);
@@ -226,7 +214,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
@@ -240,7 +227,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtArete);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FichasHembras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fichas de Hembras";
@@ -255,7 +242,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cbPartos;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label11;
         public System.Windows.Forms.TextBox txtArete;
         private System.Windows.Forms.Label label2;

@@ -72,7 +72,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Inseminacion.SuspendLayout();
             this.Preñez.SuspendLayout();
@@ -558,24 +557,12 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Parto";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(468, 625);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 28);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Menu principal";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Actividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(631, 668);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Actividad";
@@ -599,7 +586,6 @@
         private System.Windows.Forms.TabPage Inseminacion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage Partos;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
