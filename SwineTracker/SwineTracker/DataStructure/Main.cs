@@ -13,8 +13,7 @@ namespace SwineTracker.DataStructure
         private string fileName = "\\Master.txt", MainfileDirectory = SwineTracker.Properties.Settings.Default.FileDirectory;
         SwineFabric swineFabric = new SwineFabric();
         Swine newSwine = new Swine();
-        Swine oldSwine = new Swine();
-
+       
         public void BuildDirectory(string fileDirectory)
         {
             MainfileDirectory = fileDirectory;
@@ -42,6 +41,8 @@ namespace SwineTracker.DataStructure
             StreamReader sr = new StreamReader(oldName);
             string tempName = MainfileDirectory + "\\temp.txt";
             StreamWriter sw = new StreamWriter(tempName);
+            Swine oldSwine = new Swine();
+
             newSwine = updatedData;
 
             while (!sr.EndOfStream)
@@ -94,6 +95,7 @@ namespace SwineTracker.DataStructure
         {
             StreamReader sr = new StreamReader(MainfileDirectory + fileName);
             List<Swine> results = new List<Swine>();
+            Swine oldSwine = new Swine();
 
             while (!sr.EndOfStream)
             {
@@ -114,7 +116,7 @@ namespace SwineTracker.DataStructure
         {
             StreamReader sr = new StreamReader(MainfileDirectory + fileName);
             Swine result = new Swine();
-
+            Swine oldSwine = new Swine(); 
             try
             {
                 while (!sr.EndOfStream)
@@ -140,6 +142,44 @@ namespace SwineTracker.DataStructure
             }
 
             return result;
+        }
+
+        public Dictionary<Swine, int> SearchByDates(string initialDate, string endDate)
+        {
+            string oldName = MainfileDirectory + fileName;
+            StreamReader sr = new StreamReader(oldName);
+            Dictionary<Swine, int> results = new Dictionary<Swine, int>();
+            Swine swine = new Swine();           
+
+            while (!sr.EndOfStream)
+            {
+                string line = sr.ReadLine();
+                swine = swineFabric.Distribute(line);
+
+                for (int i = 0; i < swine.partos.Count; i++)
+                {
+                    Birth birth = new Birth();
+                    birth = swine.partos.ElementAt(i);
+
+                    if (Convert.ToDateTime(birth.getFechaParto()) >= Convert.ToDateTime(initialDate) && Convert.ToDateTime(birth.getFechaParto()) <= Convert.ToDateTime(endDate))
+                    {
+                       if(!results.ContainsKey(swine))
+                        {
+                            results.Add(swine, 1);
+                        }
+                       else if (results.ContainsKey(swine))
+                        {
+                            if (results.TryGetValue(swine, out int val))
+                            {
+                                results[swine] = val + 1;
+                            }
+                        }
+                    }
+                }
+            }
+            sr.Close();          
+
+            return results; 
         }
     }
 }

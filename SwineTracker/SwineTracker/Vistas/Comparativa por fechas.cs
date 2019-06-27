@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SwineTracker.DataStructure;
+
 
 namespace SwineTracker.Vistas
 {
@@ -23,6 +25,13 @@ namespace SwineTracker.Vistas
             mp.Show();
             this.Visible = false;
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Main main = new Main();
+
+            main.SearchByDates("25/05/2019", "25/06/2019");
         }
     }
     
