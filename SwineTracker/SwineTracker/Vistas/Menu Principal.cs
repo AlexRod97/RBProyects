@@ -115,6 +115,21 @@ namespace SwineTracker
 
 
             String direccion = openFileDialog1.FileName;
+            
+            System.IO.StreamReader file = new System.IO.StreamReader(direccion);
+            System.IO.File.Delete(SwineTracker.Properties.Settings.Default.FileDirectory);
+            System.IO.File.Create(SwineTracker.Properties.Settings.Default.FileDirectory);
+
+            String line = file.ReadLine();
+            while (line != null)
+            {
+                String[] separacion = line.Split(';');
+
+                
+                line = file.ReadLine();
+            }
+
+
 
         }
 

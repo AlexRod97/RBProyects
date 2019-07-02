@@ -15,6 +15,7 @@ namespace SwineTracker.Vistas
         public Comparativa_por_hembra()
         {
             InitializeComponent();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -23,6 +24,11 @@ namespace SwineTracker.Vistas
             mp.Show();
             this.Visible = false;
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

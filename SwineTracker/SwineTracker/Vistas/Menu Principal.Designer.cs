@@ -48,10 +48,10 @@
             this.Logo = new System.Windows.Forms.PictureBox();
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.FooterPanel = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.PictureBox();
-            this.btnMax = new System.Windows.Forms.PictureBox();
             this.btnMin = new System.Windows.Forms.PictureBox();
+            this.btnMax = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.PictureBox();
+            this.FooterPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.BtnRemplazos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInseminacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFichas)).BeginInit();
@@ -68,10 +68,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.HeaderPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
-            this.FooterPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            this.FooterPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -81,9 +81,10 @@
             // BtnRemplazos
             // 
             this.BtnRemplazos.BackColor = System.Drawing.Color.White;
-            this.BtnRemplazos.Location = new System.Drawing.Point(3, 16);
+            this.BtnRemplazos.Location = new System.Drawing.Point(2, 13);
+            this.BtnRemplazos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnRemplazos.Name = "BtnRemplazos";
-            this.BtnRemplazos.Size = new System.Drawing.Size(195, 120);
+            this.BtnRemplazos.Size = new System.Drawing.Size(146, 98);
             this.BtnRemplazos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BtnRemplazos.TabIndex = 29;
             this.BtnRemplazos.TabStop = false;
@@ -94,9 +95,10 @@
             // btnInseminacion
             // 
             this.btnInseminacion.BackColor = System.Drawing.Color.White;
-            this.btnInseminacion.Location = new System.Drawing.Point(217, 16);
+            this.btnInseminacion.Location = new System.Drawing.Point(163, 13);
+            this.btnInseminacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInseminacion.Name = "btnInseminacion";
-            this.btnInseminacion.Size = new System.Drawing.Size(195, 120);
+            this.btnInseminacion.Size = new System.Drawing.Size(146, 98);
             this.btnInseminacion.TabIndex = 30;
             this.btnInseminacion.TabStop = false;
             this.btnInseminacion.Click += new System.EventHandler(this.btnInseminacion_Click);
@@ -106,9 +108,10 @@
             // btnFichas
             // 
             this.btnFichas.Image = global::SwineTracker.Properties.Resources.fichaHembras;
-            this.btnFichas.Location = new System.Drawing.Point(421, 16);
+            this.btnFichas.Location = new System.Drawing.Point(316, 13);
+            this.btnFichas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFichas.Name = "btnFichas";
-            this.btnFichas.Size = new System.Drawing.Size(195, 120);
+            this.btnFichas.Size = new System.Drawing.Size(146, 98);
             this.btnFichas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnFichas.TabIndex = 31;
             this.btnFichas.TabStop = false;
@@ -119,9 +122,10 @@
             // btnComparativaH
             // 
             this.btnComparativaH.Image = global::SwineTracker.Properties.Resources.comparativaHembras;
-            this.btnComparativaH.Location = new System.Drawing.Point(634, 16);
+            this.btnComparativaH.Location = new System.Drawing.Point(476, 13);
+            this.btnComparativaH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnComparativaH.Name = "btnComparativaH";
-            this.btnComparativaH.Size = new System.Drawing.Size(195, 120);
+            this.btnComparativaH.Size = new System.Drawing.Size(146, 98);
             this.btnComparativaH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnComparativaH.TabIndex = 32;
             this.btnComparativaH.TabStop = false;
@@ -132,9 +136,10 @@
             // btnComparativaF
             // 
             this.btnComparativaF.Image = global::SwineTracker.Properties.Resources.comparativaFechas;
-            this.btnComparativaF.Location = new System.Drawing.Point(863, 13);
+            this.btnComparativaF.Location = new System.Drawing.Point(647, 11);
+            this.btnComparativaF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnComparativaF.Name = "btnComparativaF";
-            this.btnComparativaF.Size = new System.Drawing.Size(195, 120);
+            this.btnComparativaF.Size = new System.Drawing.Size(146, 98);
             this.btnComparativaF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnComparativaF.TabIndex = 33;
             this.btnComparativaF.TabStop = false;
@@ -145,9 +150,10 @@
             // btnFechaConfirmacion
             // 
             this.btnFechaConfirmacion.Image = global::SwineTracker.Properties.Resources.fichasConfirmacion;
-            this.btnFechaConfirmacion.Location = new System.Drawing.Point(1, 9);
+            this.btnFechaConfirmacion.Location = new System.Drawing.Point(1, 7);
+            this.btnFechaConfirmacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFechaConfirmacion.Name = "btnFechaConfirmacion";
-            this.btnFechaConfirmacion.Size = new System.Drawing.Size(195, 120);
+            this.btnFechaConfirmacion.Size = new System.Drawing.Size(146, 98);
             this.btnFechaConfirmacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnFechaConfirmacion.TabIndex = 34;
             this.btnFechaConfirmacion.TabStop = false;
@@ -158,9 +164,10 @@
             // btnProyeccion
             // 
             this.btnProyeccion.Image = global::SwineTracker.Properties.Resources.proyeccionPartos;
-            this.btnProyeccion.Location = new System.Drawing.Point(218, 9);
+            this.btnProyeccion.Location = new System.Drawing.Point(164, 7);
+            this.btnProyeccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnProyeccion.Name = "btnProyeccion";
-            this.btnProyeccion.Size = new System.Drawing.Size(195, 120);
+            this.btnProyeccion.Size = new System.Drawing.Size(146, 98);
             this.btnProyeccion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnProyeccion.TabIndex = 35;
             this.btnProyeccion.TabStop = false;
@@ -171,9 +178,10 @@
             // btnDestete
             // 
             this.btnDestete.Image = global::SwineTracker.Properties.Resources.destete;
-            this.btnDestete.Location = new System.Drawing.Point(422, 9);
+            this.btnDestete.Location = new System.Drawing.Point(316, 7);
+            this.btnDestete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDestete.Name = "btnDestete";
-            this.btnDestete.Size = new System.Drawing.Size(195, 120);
+            this.btnDestete.Size = new System.Drawing.Size(146, 98);
             this.btnDestete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnDestete.TabIndex = 36;
             this.btnDestete.TabStop = false;
@@ -184,9 +192,10 @@
             // btnNotificaciones
             // 
             this.btnNotificaciones.Image = global::SwineTracker.Properties.Resources.notificaciones;
-            this.btnNotificaciones.Location = new System.Drawing.Point(635, 9);
+            this.btnNotificaciones.Location = new System.Drawing.Point(476, 7);
+            this.btnNotificaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNotificaciones.Name = "btnNotificaciones";
-            this.btnNotificaciones.Size = new System.Drawing.Size(195, 120);
+            this.btnNotificaciones.Size = new System.Drawing.Size(146, 98);
             this.btnNotificaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnNotificaciones.TabIndex = 37;
             this.btnNotificaciones.TabStop = false;
@@ -197,9 +206,10 @@
             // btnBajas
             // 
             this.btnBajas.BackColor = System.Drawing.Color.White;
-            this.btnBajas.Location = new System.Drawing.Point(864, 9);
+            this.btnBajas.Location = new System.Drawing.Point(648, 7);
+            this.btnBajas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBajas.Name = "btnBajas";
-            this.btnBajas.Size = new System.Drawing.Size(195, 120);
+            this.btnBajas.Size = new System.Drawing.Size(146, 98);
             this.btnBajas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnBajas.TabIndex = 38;
             this.btnBajas.TabStop = false;
@@ -210,9 +220,10 @@
             // btnCargarDatos
             // 
             this.btnCargarDatos.Image = global::SwineTracker.Properties.Resources.cargarBase;
-            this.btnCargarDatos.Location = new System.Drawing.Point(35, 445);
+            this.btnCargarDatos.Location = new System.Drawing.Point(26, 362);
+            this.btnCargarDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCargarDatos.Name = "btnCargarDatos";
-            this.btnCargarDatos.Size = new System.Drawing.Size(195, 65);
+            this.btnCargarDatos.Size = new System.Drawing.Size(146, 53);
             this.btnCargarDatos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCargarDatos.TabIndex = 39;
             this.btnCargarDatos.TabStop = false;
@@ -223,9 +234,10 @@
             // btnExportarDatos
             // 
             this.btnExportarDatos.Image = global::SwineTracker.Properties.Resources.exportarBase;
-            this.btnExportarDatos.Location = new System.Drawing.Point(35, 510);
+            this.btnExportarDatos.Location = new System.Drawing.Point(26, 414);
+            this.btnExportarDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExportarDatos.Name = "btnExportarDatos";
-            this.btnExportarDatos.Size = new System.Drawing.Size(195, 65);
+            this.btnExportarDatos.Size = new System.Drawing.Size(146, 53);
             this.btnExportarDatos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnExportarDatos.TabIndex = 40;
             this.btnExportarDatos.TabStop = false;
@@ -236,9 +248,10 @@
             // btnSesion
             // 
             this.btnSesion.Image = global::SwineTracker.Properties.Resources.cerrarSesion;
-            this.btnSesion.Location = new System.Drawing.Point(925, 510);
+            this.btnSesion.Location = new System.Drawing.Point(694, 414);
+            this.btnSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSesion.Name = "btnSesion";
-            this.btnSesion.Size = new System.Drawing.Size(165, 65);
+            this.btnSesion.Size = new System.Drawing.Size(124, 53);
             this.btnSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSesion.TabIndex = 41;
             this.btnSesion.TabStop = false;
@@ -250,9 +263,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(214, 136);
+            this.label1.Location = new System.Drawing.Point(160, 110);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 17);
+            this.label1.Size = new System.Drawing.Size(156, 13);
             this.label1.TabIndex = 42;
             this.label1.Text = "Agregar Inseminación y/o Parto";
             // 
@@ -260,9 +274,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(20, 136);
+            this.label2.Location = new System.Drawing.Point(15, 110);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 17);
+            this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 43;
             this.label2.Text = "Ingreso de Reemplazos";
             // 
@@ -270,9 +285,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(916, 132);
+            this.label3.Location = new System.Drawing.Point(687, 107);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 17);
+            this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 44;
             this.label3.Text = "Dar de baja";
             // 
@@ -280,9 +296,10 @@
             // 
             this.Logo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Logo.Image = global::SwineTracker.Properties.Resources.logo;
-            this.Logo.Location = new System.Drawing.Point(405, -10);
+            this.Logo.Location = new System.Drawing.Point(304, -8);
+            this.Logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(320, 135);
+            this.Logo.Size = new System.Drawing.Size(240, 110);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Logo.TabIndex = 45;
             this.Logo.TabStop = false;
@@ -296,9 +313,10 @@
             this.HeaderPanel.Controls.Add(this.btnComparativaH);
             this.HeaderPanel.Controls.Add(this.label1);
             this.HeaderPanel.Controls.Add(this.btnComparativaF);
-            this.HeaderPanel.Location = new System.Drawing.Point(35, 105);
+            this.HeaderPanel.Location = new System.Drawing.Point(26, 85);
+            this.HeaderPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(1086, 160);
+            this.HeaderPanel.Size = new System.Drawing.Size(814, 130);
             this.HeaderPanel.TabIndex = 46;
             // 
             // MainPanel
@@ -314,9 +332,52 @@
             this.MainPanel.Controls.Add(this.btnCargarDatos);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1132, 610);
+            this.MainPanel.Size = new System.Drawing.Size(849, 496);
             this.MainPanel.TabIndex = 0;
+            // 
+            // btnMin
+            // 
+            this.btnMin.Image = global::SwineTracker.Properties.Resources.minimizar;
+            this.btnMin.Location = new System.Drawing.Point(776, 10);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(19, 20);
+            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnMin.TabIndex = 50;
+            this.btnMin.TabStop = false;
+            this.btnMin.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.btnMin.MouseLeave += new System.EventHandler(this.btnMin_MouseLeave);
+            this.btnMin.MouseHover += new System.EventHandler(this.btnMin_MouseHover);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Image = global::SwineTracker.Properties.Resources.maximizar;
+            this.btnMax.Location = new System.Drawing.Point(799, 10);
+            this.btnMax.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(19, 20);
+            this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnMax.TabIndex = 49;
+            this.btnMax.TabStop = false;
+            this.btnMax.Click += new System.EventHandler(this.btnMaximizar_Click);
+            this.btnMax.MouseLeave += new System.EventHandler(this.btnMax_MouseLeave);
+            this.btnMax.MouseHover += new System.EventHandler(this.btnMax_MouseHover);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Image = global::SwineTracker.Properties.Resources.cerrar;
+            this.btnClose.Location = new System.Drawing.Point(821, 10);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(19, 20);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnClose.TabIndex = 48;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
+            this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
             // 
             // FooterPanel
             // 
@@ -326,60 +387,21 @@
             this.FooterPanel.Controls.Add(this.label3);
             this.FooterPanel.Controls.Add(this.btnNotificaciones);
             this.FooterPanel.Controls.Add(this.btnBajas);
-            this.FooterPanel.Location = new System.Drawing.Point(35, 271);
+            this.FooterPanel.Location = new System.Drawing.Point(26, 220);
+            this.FooterPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FooterPanel.Name = "FooterPanel";
-            this.FooterPanel.Size = new System.Drawing.Size(1086, 152);
+            this.FooterPanel.Size = new System.Drawing.Size(814, 124);
             this.FooterPanel.TabIndex = 47;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Image = global::SwineTracker.Properties.Resources.cerrar;
-            this.btnClose.Location = new System.Drawing.Point(1095, 12);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(25, 25);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnClose.TabIndex = 48;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnCerrar_Click);
-            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
-            this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
-            // 
-            // btnMax
-            // 
-            this.btnMax.Image = global::SwineTracker.Properties.Resources.maximizar;
-            this.btnMax.Location = new System.Drawing.Point(1065, 12);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(25, 25);
-            this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnMax.TabIndex = 49;
-            this.btnMax.TabStop = false;
-            this.btnMax.Click += new System.EventHandler(this.btnMaximizar_Click);
-            this.btnMax.MouseLeave += new System.EventHandler(this.btnMax_MouseLeave);
-            this.btnMax.MouseHover += new System.EventHandler(this.btnMax_MouseHover);
-            // 
-            // btnMin
-            // 
-            this.btnMin.Image = global::SwineTracker.Properties.Resources.minimizar;
-            this.btnMin.Location = new System.Drawing.Point(1035, 12);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(25, 25);
-            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnMin.TabIndex = 50;
-            this.btnMin.TabStop = false;
-            this.btnMin.Click += new System.EventHandler(this.btnMinimize_Click);
-            this.btnMin.MouseLeave += new System.EventHandler(this.btnMin_MouseLeave);
-            this.btnMin.MouseHover += new System.EventHandler(this.btnMin_MouseHover);
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1132, 610);
+            this.ClientSize = new System.Drawing.Size(849, 496);
             this.Controls.Add(this.MainPanel);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
@@ -404,11 +426,11 @@
             this.HeaderPanel.ResumeLayout(false);
             this.HeaderPanel.PerformLayout();
             this.MainPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.FooterPanel.ResumeLayout(false);
             this.FooterPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
             this.ResumeLayout(false);
 
         }

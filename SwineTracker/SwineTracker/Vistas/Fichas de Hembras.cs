@@ -12,23 +12,12 @@ namespace SwineTracker.Vistas
 {
     public partial class FichasHembras : Form
     {
+
         public FichasHembras()
         {
-            DataTable table = new DataTable();
-            DataColumn dc;
-            DataRow dr;
-            
-            table.Columns.Add("Arete", typeof(string));
-            table.Columns.Add("Numero de Partos", typeof(int));
-            table.Columns.Add("Vivos", typeof(int));
-            table.Columns.Add("Muertos", typeof(int));
-            table.Columns.Add("Momias", typeof(int));
-            table.Columns.Add("Pesos", typeof(string));
-            table.Columns.Add("Peso Promedio", typeof(double));
-            table.Columns.Add("Promedio Lechones por parto", typeof(double));
-            
             InitializeComponent();
 
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -57,13 +46,38 @@ namespace SwineTracker.Vistas
             cbPartos.Items.Clear();
             DataStructure.Main main = new DataStructure.Main();
             var hembra = main.ExisteArete(txtArete.Text);
-            cbPartos.Items.Add("General");
-            for (int i = 1; i <= hembra.getTotalPartos(); i++)
+            if (hembra != null)
             {
-                cbPartos.Items.Add(i.ToString());
+                int num = 0;
+                cbPartos.Items.Add("General");
+                for (int i = 1; i <= hembra.getTotalPartos(); i++)
+                {
+                    cbPartos.Items.Add(i.ToString());
+                    num = i;
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("La hembra no existe");
             }
             
 
+        }
+
+        private void cbPartos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataStructure.Main main = new DataStructure.Main();
+            var hembra = main.ExisteArete(txtArete.Text);
+            if (cbPartos.SelectedItem.ToString() == "General")
+            {
+
+            }
+            else
+            {
+                int parto = Convert.ToInt32(cbPartos.SelectedItem);
+
+            }
         }
     }
 }
