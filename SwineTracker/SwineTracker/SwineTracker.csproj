@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +49,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>minlogo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
@@ -71,6 +89,11 @@
     </Compile>
     <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Actividad.cs">
       <SubType>Form</SubType>
@@ -152,13 +175,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Vistas\Actividad.resx">
       <DependentUpon>Actividad.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,45 +230,52 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\notificaciones.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\fichasConfirmacion.png" />
-    <None Include="Resources\fichaHembras.png" />
-    <None Include="Resources\exportarBase.png" />
-    <None Include="Resources\destete.png" />
-    <None Include="Resources\comparativaHembras.png" />
-    <None Include="Resources\comparativaFechas.png" />
-    <None Include="Resources\cerrarSesion.png" />
-    <None Include="Resources\cargarBase.png" />
-    <None Include="Resources\barraBotones.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\proyeccionPartos.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\botonLogin.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="minlogo.ico" />
+    <None Include="Resources\inputsmall.png" />
+    <None Include="Resources\buscarbtn.png" />
+    <None Include="Resources\guardarbtn.png" />
+    <None Include="Resources\guardarfpbtn.png" />
+    <None Include="Resources\guardarfibtn.png" />
+    <None Include="Resources\cargarhbtn1.png" />
+    <None Include="Resources\confirmacionesbtn.png" />
+    <None Include="Resources\partosbtn.png" />
+    <None Include="Resources\cropIco.png" />
+    <None Include="Resources\cargarhbtn.png" />
     <None Include="Resources\password.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cerrar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\maximizar.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\inputlarge.png" />
+    <None Include="Resources\cerrarsesion.png" />
+    <None Include="Resources\exportardb.png" />
+    <None Include="Resources\cargardb.png" />
+    <None Include="Resources\dardebaja.png" />
+    <None Include="Resources\notificaciones.png" />
+    <None Include="Resources\destete.png" />
+    <None Include="Resources\proyeccionpartos.png" />
+    <None Include="Resources\fechasConfirmacion.png" />
+    <None Include="Resources\comparativaFechas.png" />
+    <None Include="Resources\comparativahembra.png" />
+    <None Include="Resources\fichashembras.png" />
+    <None Include="Resources\agregarPartoInseminacion.png" />
+    <None Include="Resources\ingresoRemplazos.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\botonLogin.png" />
     <None Include="Resources\minimizar.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\maximizar.png" />
+    <None Include="Resources\cerrar.png" />
     <None Include="Resources\TwinBackground.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,6 +28,11 @@ namespace SwineTracker.Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
             Swine swine = new Swine();
             Main main = new Main();
 

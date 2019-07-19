@@ -63,9 +63,9 @@ namespace SwineTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap barraBotones {
+        internal static System.Drawing.Bitmap agregarPartoInseminacion {
             get {
-                object obj = ResourceManager.GetObject("barraBotones", resourceCulture);
+                object obj = ResourceManager.GetObject("agregarPartoInseminacion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,39 @@ namespace SwineTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cargarBase {
+        internal static System.Drawing.Bitmap buscarbtn {
             get {
-                object obj = ResourceManager.GetObject("cargarBase", resourceCulture);
+                object obj = ResourceManager.GetObject("buscarbtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cargardb {
+            get {
+                object obj = ResourceManager.GetObject("cargardb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cargarhbtn {
+            get {
+                object obj = ResourceManager.GetObject("cargarhbtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cargarhbtn1 {
+            get {
+                object obj = ResourceManager.GetObject("cargarhbtn1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +133,9 @@ namespace SwineTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cerrarSesion {
+        internal static System.Drawing.Bitmap cerrarsesion {
             get {
-                object obj = ResourceManager.GetObject("cerrarSesion", resourceCulture);
+                object obj = ResourceManager.GetObject("cerrarsesion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +153,39 @@ namespace SwineTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap comparativaHembras {
+        internal static System.Drawing.Bitmap comparativahembra {
             get {
-                object obj = ResourceManager.GetObject("comparativaHembras", resourceCulture);
+                object obj = ResourceManager.GetObject("comparativahembra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap confirmacionesbtn {
+            get {
+                object obj = ResourceManager.GetObject("confirmacionesbtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cropIco {
+            get {
+                object obj = ResourceManager.GetObject("cropIco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dardebaja {
+            get {
+                object obj = ResourceManager.GetObject("dardebaja", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +203,9 @@ namespace SwineTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap exportarBase {
+        internal static System.Drawing.Bitmap exportardb {
             get {
-                object obj = ResourceManager.GetObject("exportarBase", resourceCulture);
+                object obj = ResourceManager.GetObject("exportardb", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +213,9 @@ namespace SwineTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fichaHembras {
+        internal static System.Drawing.Bitmap fechasConfirmacion {
             get {
-                object obj = ResourceManager.GetObject("fichaHembras", resourceCulture);
+                object obj = ResourceManager.GetObject("fechasConfirmacion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +223,69 @@ namespace SwineTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fichasConfirmacion {
+        internal static System.Drawing.Bitmap fichashembras {
             get {
-                object obj = ResourceManager.GetObject("fichasConfirmacion", resourceCulture);
+                object obj = ResourceManager.GetObject("fichashembras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap guardarbtn {
+            get {
+                object obj = ResourceManager.GetObject("guardarbtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap guardarfibtn {
+            get {
+                object obj = ResourceManager.GetObject("guardarfibtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap guardarfpbtn {
+            get {
+                object obj = ResourceManager.GetObject("guardarfpbtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ingresoRemplazos {
+            get {
+                object obj = ResourceManager.GetObject("ingresoRemplazos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inputlarge {
+            get {
+                object obj = ResourceManager.GetObject("inputlarge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inputsmall {
+            get {
+                object obj = ResourceManager.GetObject("inputsmall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,6 +333,16 @@ namespace SwineTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap partosbtn {
+            get {
+                object obj = ResourceManager.GetObject("partosbtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap password {
             get {
                 object obj = ResourceManager.GetObject("password", resourceCulture);
@@ -223,19 +353,9 @@ namespace SwineTracker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap password1 {
+        internal static System.Drawing.Bitmap proyeccionpartos {
             get {
-                object obj = ResourceManager.GetObject("password1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap proyeccionPartos {
-            get {
-                object obj = ResourceManager.GetObject("proyeccionPartos", resourceCulture);
+                object obj = ResourceManager.GetObject("proyeccionpartos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -28,154 +28,255 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.BtnRemplazos = new System.Windows.Forms.PictureBox();
+            this.HeaderPanel = new System.Windows.Forms.Panel();
+            this.btnFichaHembra = new System.Windows.Forms.PictureBox();
+            this.btnComparativaHembra = new System.Windows.Forms.PictureBox();
             this.btnInseminacion = new System.Windows.Forms.PictureBox();
-            this.btnFichas = new System.Windows.Forms.PictureBox();
-            this.btnComparativaH = new System.Windows.Forms.PictureBox();
-            this.btnComparativaF = new System.Windows.Forms.PictureBox();
-            this.btnFechaConfirmacion = new System.Windows.Forms.PictureBox();
-            this.btnProyeccion = new System.Windows.Forms.PictureBox();
+            this.btnComparativaFecha = new System.Windows.Forms.PictureBox();
+            this.btnReemplazos = new System.Windows.Forms.PictureBox();
+            this.MainPanel = new System.Windows.Forms.Panel();
+            this.WindowPanel = new System.Windows.Forms.Panel();
+            this.btnMin = new System.Windows.Forms.PictureBox();
+            this.btnMax = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.PictureBox();
+            this.ExtrasPanel = new System.Windows.Forms.Panel();
+            this.btnSesion = new System.Windows.Forms.PictureBox();
+            this.Logo = new System.Windows.Forms.PictureBox();
+            this.BottomPanel = new System.Windows.Forms.Panel();
             this.btnDestete = new System.Windows.Forms.PictureBox();
             this.btnNotificaciones = new System.Windows.Forms.PictureBox();
+            this.btnFechaConfirmacion = new System.Windows.Forms.PictureBox();
+            this.btnProyeccionParto = new System.Windows.Forms.PictureBox();
             this.btnBajas = new System.Windows.Forms.PictureBox();
-            this.btnCargarDatos = new System.Windows.Forms.PictureBox();
-            this.btnExportarDatos = new System.Windows.Forms.PictureBox();
-            this.btnSesion = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Logo = new System.Windows.Forms.PictureBox();
-            this.HeaderPanel = new System.Windows.Forms.Panel();
-            this.MainPanel = new System.Windows.Forms.Panel();
-            this.FooterPanel = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.PictureBox();
-            this.btnMax = new System.Windows.Forms.PictureBox();
-            this.btnMin = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnRemplazos)).BeginInit();
+            this.btnCargarBd = new System.Windows.Forms.PictureBox();
+            this.btnDescargarBd = new System.Windows.Forms.PictureBox();
+            this.HeaderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFichaHembra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnComparativaHembra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInseminacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnFichas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnComparativaH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnComparativaF)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnFechaConfirmacion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProyeccion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDestete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNotificaciones)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBajas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCargarDatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExportarDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnComparativaFecha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReemplazos)).BeginInit();
+            this.MainPanel.SuspendLayout();
+            this.WindowPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            this.ExtrasPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSesion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
-            this.HeaderPanel.SuspendLayout();
-            this.MainPanel.SuspendLayout();
-            this.FooterPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
+            this.BottomPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDestete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNotificaciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechaConfirmacion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProyeccionParto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBajas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCargarBd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDescargarBd)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "Excel";
             // 
-            // BtnRemplazos
+            // HeaderPanel
             // 
-            this.BtnRemplazos.BackColor = System.Drawing.Color.White;
-            this.BtnRemplazos.Location = new System.Drawing.Point(3, 16);
-            this.BtnRemplazos.Name = "BtnRemplazos";
-            this.BtnRemplazos.Size = new System.Drawing.Size(195, 120);
-            this.BtnRemplazos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.BtnRemplazos.TabIndex = 29;
-            this.BtnRemplazos.TabStop = false;
-            this.BtnRemplazos.Click += new System.EventHandler(this.BtnRemplazos_Click);
-            this.BtnRemplazos.MouseLeave += new System.EventHandler(this.BtnRemplazos_MouseLeave);
-            this.BtnRemplazos.MouseHover += new System.EventHandler(this.BtnRemplazos_MouseHover);
+            this.HeaderPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.HeaderPanel.Controls.Add(this.btnFichaHembra);
+            this.HeaderPanel.Controls.Add(this.btnComparativaHembra);
+            this.HeaderPanel.Controls.Add(this.btnInseminacion);
+            this.HeaderPanel.Controls.Add(this.btnComparativaFecha);
+            this.HeaderPanel.Controls.Add(this.btnReemplazos);
+            this.HeaderPanel.Location = new System.Drawing.Point(35, 130);
+            this.HeaderPanel.Name = "HeaderPanel";
+            this.HeaderPanel.Size = new System.Drawing.Size(1080, 160);
+            this.HeaderPanel.TabIndex = 46;
+            // 
+            // btnFichaHembra
+            // 
+            this.btnFichaHembra.BackColor = System.Drawing.Color.White;
+            this.btnFichaHembra.Image = global::SwineTracker.Properties.Resources.fichashembras;
+            this.btnFichaHembra.Location = new System.Drawing.Point(440, 20);
+            this.btnFichaHembra.Name = "btnFichaHembra";
+            this.btnFichaHembra.Size = new System.Drawing.Size(195, 120);
+            this.btnFichaHembra.TabIndex = 55;
+            this.btnFichaHembra.TabStop = false;
+            this.btnFichaHembra.Click += new System.EventHandler(this.btnFichaHembra_Click);
+            this.btnFichaHembra.MouseLeave += new System.EventHandler(this.btnFichaHembra_MouseLeave);
+            this.btnFichaHembra.MouseHover += new System.EventHandler(this.btnFichaHembra_MouseHover);
+            // 
+            // btnComparativaHembra
+            // 
+            this.btnComparativaHembra.BackColor = System.Drawing.Color.White;
+            this.btnComparativaHembra.Image = global::SwineTracker.Properties.Resources.comparativahembra;
+            this.btnComparativaHembra.Location = new System.Drawing.Point(660, 20);
+            this.btnComparativaHembra.Name = "btnComparativaHembra";
+            this.btnComparativaHembra.Size = new System.Drawing.Size(195, 120);
+            this.btnComparativaHembra.TabIndex = 54;
+            this.btnComparativaHembra.TabStop = false;
+            this.btnComparativaHembra.Click += new System.EventHandler(this.btnComparativaHembra_Click);
+            this.btnComparativaHembra.MouseLeave += new System.EventHandler(this.btnComparativaHembra_MouseLeave);
+            this.btnComparativaHembra.MouseHover += new System.EventHandler(this.btnComparativaHembra_MouseHover);
             // 
             // btnInseminacion
             // 
             this.btnInseminacion.BackColor = System.Drawing.Color.White;
-            this.btnInseminacion.Location = new System.Drawing.Point(217, 16);
+            this.btnInseminacion.Image = global::SwineTracker.Properties.Resources.agregarPartoInseminacion;
+            this.btnInseminacion.Location = new System.Drawing.Point(220, 20);
             this.btnInseminacion.Name = "btnInseminacion";
             this.btnInseminacion.Size = new System.Drawing.Size(195, 120);
-            this.btnInseminacion.TabIndex = 30;
+            this.btnInseminacion.TabIndex = 53;
             this.btnInseminacion.TabStop = false;
             this.btnInseminacion.Click += new System.EventHandler(this.btnInseminacion_Click);
             this.btnInseminacion.MouseLeave += new System.EventHandler(this.btnInseminacion_MouseLeave);
             this.btnInseminacion.MouseHover += new System.EventHandler(this.btnInseminacion_MouseHover);
             // 
-            // btnFichas
+            // btnComparativaFecha
             // 
-            this.btnFichas.Image = global::SwineTracker.Properties.Resources.fichaHembras;
-            this.btnFichas.Location = new System.Drawing.Point(421, 16);
-            this.btnFichas.Name = "btnFichas";
-            this.btnFichas.Size = new System.Drawing.Size(195, 120);
-            this.btnFichas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnFichas.TabIndex = 31;
-            this.btnFichas.TabStop = false;
-            this.btnFichas.Click += new System.EventHandler(this.btnFichas_Click);
-            this.btnFichas.MouseLeave += new System.EventHandler(this.btnFichas_MouseLeave);
-            this.btnFichas.MouseHover += new System.EventHandler(this.btnFichas_MouseHover);
+            this.btnComparativaFecha.BackColor = System.Drawing.Color.White;
+            this.btnComparativaFecha.Image = global::SwineTracker.Properties.Resources.comparativaFechas;
+            this.btnComparativaFecha.Location = new System.Drawing.Point(880, 20);
+            this.btnComparativaFecha.Name = "btnComparativaFecha";
+            this.btnComparativaFecha.Size = new System.Drawing.Size(195, 120);
+            this.btnComparativaFecha.TabIndex = 52;
+            this.btnComparativaFecha.TabStop = false;
+            this.btnComparativaFecha.Click += new System.EventHandler(this.btnComparativaFecha_Click);
+            this.btnComparativaFecha.MouseLeave += new System.EventHandler(this.btnComparativaFecha_MouseLeave);
+            this.btnComparativaFecha.MouseHover += new System.EventHandler(this.btnComparativaFecha_MouseHover);
             // 
-            // btnComparativaH
+            // btnReemplazos
             // 
-            this.btnComparativaH.Image = global::SwineTracker.Properties.Resources.comparativaHembras;
-            this.btnComparativaH.Location = new System.Drawing.Point(634, 16);
-            this.btnComparativaH.Name = "btnComparativaH";
-            this.btnComparativaH.Size = new System.Drawing.Size(195, 120);
-            this.btnComparativaH.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnComparativaH.TabIndex = 32;
-            this.btnComparativaH.TabStop = false;
-            this.btnComparativaH.Click += new System.EventHandler(this.btnComparativaH_Click);
-            this.btnComparativaH.MouseLeave += new System.EventHandler(this.btnComparativaH_MouseLeave);
-            this.btnComparativaH.MouseHover += new System.EventHandler(this.btnComparativaH_MouseHover);
+            this.btnReemplazos.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnReemplazos.BackColor = System.Drawing.Color.White;
+            this.btnReemplazos.Image = global::SwineTracker.Properties.Resources.ingresoRemplazos;
+            this.btnReemplazos.Location = new System.Drawing.Point(0, 20);
+            this.btnReemplazos.Name = "btnReemplazos";
+            this.btnReemplazos.Size = new System.Drawing.Size(195, 120);
+            this.btnReemplazos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnReemplazos.TabIndex = 51;
+            this.btnReemplazos.TabStop = false;
+            this.btnReemplazos.Click += new System.EventHandler(this.btnReemplazos_Click);
+            this.btnReemplazos.MouseLeave += new System.EventHandler(this.btnReemplazos_MouseLeave);
+            this.btnReemplazos.MouseHover += new System.EventHandler(this.btnReemplazos_MouseHover);
             // 
-            // btnComparativaF
+            // MainPanel
             // 
-            this.btnComparativaF.Image = global::SwineTracker.Properties.Resources.comparativaFechas;
-            this.btnComparativaF.Location = new System.Drawing.Point(863, 13);
-            this.btnComparativaF.Name = "btnComparativaF";
-            this.btnComparativaF.Size = new System.Drawing.Size(195, 120);
-            this.btnComparativaF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnComparativaF.TabIndex = 33;
-            this.btnComparativaF.TabStop = false;
-            this.btnComparativaF.Click += new System.EventHandler(this.btnComparativaF_Click);
-            this.btnComparativaF.MouseLeave += new System.EventHandler(this.btnComparativaF_MouseLeave);
-            this.btnComparativaF.MouseHover += new System.EventHandler(this.btnComparativaF_MouseHover);
+            this.MainPanel.Controls.Add(this.WindowPanel);
+            this.MainPanel.Controls.Add(this.ExtrasPanel);
+            this.MainPanel.Controls.Add(this.Logo);
+            this.MainPanel.Controls.Add(this.BottomPanel);
+            this.MainPanel.Controls.Add(this.HeaderPanel);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(1132, 610);
+            this.MainPanel.TabIndex = 0;
             // 
-            // btnFechaConfirmacion
+            // WindowPanel
             // 
-            this.btnFechaConfirmacion.Image = global::SwineTracker.Properties.Resources.fichasConfirmacion;
-            this.btnFechaConfirmacion.Location = new System.Drawing.Point(1, 9);
-            this.btnFechaConfirmacion.Name = "btnFechaConfirmacion";
-            this.btnFechaConfirmacion.Size = new System.Drawing.Size(195, 120);
-            this.btnFechaConfirmacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnFechaConfirmacion.TabIndex = 34;
-            this.btnFechaConfirmacion.TabStop = false;
-            this.btnFechaConfirmacion.Click += new System.EventHandler(this.btnFechaConfirmacion_Click);
-            this.btnFechaConfirmacion.MouseLeave += new System.EventHandler(this.btnFechaConfirmacion_MouseLeave);
-            this.btnFechaConfirmacion.MouseHover += new System.EventHandler(this.btnFechaConfirmacion_MouseHover);
+            this.WindowPanel.Controls.Add(this.btnMin);
+            this.WindowPanel.Controls.Add(this.btnMax);
+            this.WindowPanel.Controls.Add(this.btnClose);
+            this.WindowPanel.Location = new System.Drawing.Point(1035, 3);
+            this.WindowPanel.Name = "WindowPanel";
+            this.WindowPanel.Size = new System.Drawing.Size(94, 34);
+            this.WindowPanel.TabIndex = 64;
             // 
-            // btnProyeccion
+            // btnMin
             // 
-            this.btnProyeccion.Image = global::SwineTracker.Properties.Resources.proyeccionPartos;
-            this.btnProyeccion.Location = new System.Drawing.Point(218, 9);
-            this.btnProyeccion.Name = "btnProyeccion";
-            this.btnProyeccion.Size = new System.Drawing.Size(195, 120);
-            this.btnProyeccion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnProyeccion.TabIndex = 35;
-            this.btnProyeccion.TabStop = false;
-            this.btnProyeccion.Click += new System.EventHandler(this.btnProyeccion_Click);
-            this.btnProyeccion.MouseLeave += new System.EventHandler(this.btnProyeccion_MouseLeave);
-            this.btnProyeccion.MouseHover += new System.EventHandler(this.btnProyeccion_MouseHover);
+            this.btnMin.Image = global::SwineTracker.Properties.Resources.minimizar;
+            this.btnMin.Location = new System.Drawing.Point(3, 3);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(25, 25);
+            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnMin.TabIndex = 66;
+            this.btnMin.TabStop = false;
+            this.btnMin.MouseLeave += new System.EventHandler(this.btnMin_MouseLeave);
+            this.btnMin.MouseHover += new System.EventHandler(this.btnMin_MouseHover);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Image = global::SwineTracker.Properties.Resources.maximizar;
+            this.btnMax.Location = new System.Drawing.Point(34, 3);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(25, 25);
+            this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnMax.TabIndex = 65;
+            this.btnMax.TabStop = false;
+            this.btnMax.MouseLeave += new System.EventHandler(this.btnMax_MouseLeave);
+            this.btnMax.MouseHover += new System.EventHandler(this.btnMax_MouseHover);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Image = global::SwineTracker.Properties.Resources.cerrar;
+            this.btnClose.Location = new System.Drawing.Point(65, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(25, 25);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnClose.TabIndex = 64;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
+            this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
+            // 
+            // ExtrasPanel
+            // 
+            this.ExtrasPanel.BackColor = System.Drawing.Color.Transparent;
+            this.ExtrasPanel.Controls.Add(this.btnDescargarBd);
+            this.ExtrasPanel.Controls.Add(this.btnCargarBd);
+            this.ExtrasPanel.Controls.Add(this.btnSesion);
+            this.ExtrasPanel.Location = new System.Drawing.Point(35, 477);
+            this.ExtrasPanel.Name = "ExtrasPanel";
+            this.ExtrasPanel.Size = new System.Drawing.Size(1086, 121);
+            this.ExtrasPanel.TabIndex = 61;
+            // 
+            // btnSesion
+            // 
+            this.btnSesion.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnSesion.BackColor = System.Drawing.Color.Transparent;
+            this.btnSesion.Image = global::SwineTracker.Properties.Resources.cerrarsesion;
+            this.btnSesion.Location = new System.Drawing.Point(900, 65);
+            this.btnSesion.Name = "btnSesion";
+            this.btnSesion.Size = new System.Drawing.Size(180, 50);
+            this.btnSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSesion.TabIndex = 57;
+            this.btnSesion.TabStop = false;
+            this.btnSesion.Click += new System.EventHandler(this.btnSesion_Click);
+            this.btnSesion.MouseLeave += new System.EventHandler(this.btnSesion_MouseLeave);
+            this.btnSesion.MouseHover += new System.EventHandler(this.btnSesion_MouseHover);
+            // 
+            // Logo
+            // 
+            this.Logo.Image = global::SwineTracker.Properties.Resources.logo;
+            this.Logo.Location = new System.Drawing.Point(417, 3);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(350, 120);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Logo.TabIndex = 56;
+            this.Logo.TabStop = false;
+            // 
+            // BottomPanel
+            // 
+            this.BottomPanel.Controls.Add(this.btnDestete);
+            this.BottomPanel.Controls.Add(this.btnNotificaciones);
+            this.BottomPanel.Controls.Add(this.btnFechaConfirmacion);
+            this.BottomPanel.Controls.Add(this.btnProyeccionParto);
+            this.BottomPanel.Controls.Add(this.btnBajas);
+            this.BottomPanel.Location = new System.Drawing.Point(35, 320);
+            this.BottomPanel.Name = "BottomPanel";
+            this.BottomPanel.Size = new System.Drawing.Size(1086, 152);
+            this.BottomPanel.TabIndex = 47;
             // 
             // btnDestete
             // 
+            this.btnDestete.BackColor = System.Drawing.Color.White;
             this.btnDestete.Image = global::SwineTracker.Properties.Resources.destete;
-            this.btnDestete.Location = new System.Drawing.Point(422, 9);
+            this.btnDestete.Location = new System.Drawing.Point(440, 17);
             this.btnDestete.Name = "btnDestete";
             this.btnDestete.Size = new System.Drawing.Size(195, 120);
-            this.btnDestete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnDestete.TabIndex = 36;
+            this.btnDestete.TabIndex = 60;
             this.btnDestete.TabStop = false;
             this.btnDestete.Click += new System.EventHandler(this.btnDestete_Click);
             this.btnDestete.MouseLeave += new System.EventHandler(this.btnDestete_MouseLeave);
@@ -183,192 +284,85 @@
             // 
             // btnNotificaciones
             // 
+            this.btnNotificaciones.BackColor = System.Drawing.Color.White;
             this.btnNotificaciones.Image = global::SwineTracker.Properties.Resources.notificaciones;
-            this.btnNotificaciones.Location = new System.Drawing.Point(635, 9);
+            this.btnNotificaciones.Location = new System.Drawing.Point(660, 17);
             this.btnNotificaciones.Name = "btnNotificaciones";
             this.btnNotificaciones.Size = new System.Drawing.Size(195, 120);
-            this.btnNotificaciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnNotificaciones.TabIndex = 37;
+            this.btnNotificaciones.TabIndex = 59;
             this.btnNotificaciones.TabStop = false;
             this.btnNotificaciones.Click += new System.EventHandler(this.btnNotificaciones_Click);
             this.btnNotificaciones.MouseLeave += new System.EventHandler(this.btnNotificaciones_MouseLeave);
             this.btnNotificaciones.MouseHover += new System.EventHandler(this.btnNotificaciones_MouseHover);
             // 
+            // btnFechaConfirmacion
+            // 
+            this.btnFechaConfirmacion.BackColor = System.Drawing.Color.White;
+            this.btnFechaConfirmacion.Image = global::SwineTracker.Properties.Resources.fechasConfirmacion;
+            this.btnFechaConfirmacion.Location = new System.Drawing.Point(0, 17);
+            this.btnFechaConfirmacion.Name = "btnFechaConfirmacion";
+            this.btnFechaConfirmacion.Size = new System.Drawing.Size(195, 120);
+            this.btnFechaConfirmacion.TabIndex = 56;
+            this.btnFechaConfirmacion.TabStop = false;
+            this.btnFechaConfirmacion.Click += new System.EventHandler(this.btnFechaConfirmacion_Click);
+            this.btnFechaConfirmacion.MouseLeave += new System.EventHandler(this.btnFechaConfirmacion_MouseLeave);
+            this.btnFechaConfirmacion.MouseHover += new System.EventHandler(this.btnFechaConfirmacion_MouseHover);
+            // 
+            // btnProyeccionParto
+            // 
+            this.btnProyeccionParto.BackColor = System.Drawing.Color.White;
+            this.btnProyeccionParto.Image = global::SwineTracker.Properties.Resources.proyeccionpartos;
+            this.btnProyeccionParto.Location = new System.Drawing.Point(220, 17);
+            this.btnProyeccionParto.Name = "btnProyeccionParto";
+            this.btnProyeccionParto.Size = new System.Drawing.Size(195, 120);
+            this.btnProyeccionParto.TabIndex = 58;
+            this.btnProyeccionParto.TabStop = false;
+            this.btnProyeccionParto.Click += new System.EventHandler(this.btnProyeccionParto_Click);
+            this.btnProyeccionParto.MouseLeave += new System.EventHandler(this.btnProyeccionParto_MouseLeave);
+            this.btnProyeccionParto.MouseHover += new System.EventHandler(this.btnProyeccionParto_MouseHover);
+            // 
             // btnBajas
             // 
             this.btnBajas.BackColor = System.Drawing.Color.White;
-            this.btnBajas.Location = new System.Drawing.Point(864, 9);
+            this.btnBajas.Image = global::SwineTracker.Properties.Resources.dardebaja;
+            this.btnBajas.Location = new System.Drawing.Point(880, 17);
             this.btnBajas.Name = "btnBajas";
             this.btnBajas.Size = new System.Drawing.Size(195, 120);
-            this.btnBajas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnBajas.TabIndex = 38;
+            this.btnBajas.TabIndex = 57;
             this.btnBajas.TabStop = false;
             this.btnBajas.Click += new System.EventHandler(this.btnBajas_Click);
             this.btnBajas.MouseLeave += new System.EventHandler(this.btnBajas_MouseLeave);
             this.btnBajas.MouseHover += new System.EventHandler(this.btnBajas_MouseHover);
             // 
-            // btnCargarDatos
+            // btnCargarBd
             // 
-            this.btnCargarDatos.Image = global::SwineTracker.Properties.Resources.cargarBase;
-            this.btnCargarDatos.Location = new System.Drawing.Point(35, 445);
-            this.btnCargarDatos.Name = "btnCargarDatos";
-            this.btnCargarDatos.Size = new System.Drawing.Size(195, 65);
-            this.btnCargarDatos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCargarDatos.TabIndex = 39;
-            this.btnCargarDatos.TabStop = false;
-            this.btnCargarDatos.Click += new System.EventHandler(this.btnCargarDatos_Click);
-            this.btnCargarDatos.MouseLeave += new System.EventHandler(this.btnCargarDatos_MouseLeave);
-            this.btnCargarDatos.MouseHover += new System.EventHandler(this.btnCargarDatos_MouseHover);
+            this.btnCargarBd.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnCargarBd.BackColor = System.Drawing.Color.Transparent;
+            this.btnCargarBd.Image = global::SwineTracker.Properties.Resources.cargardb;
+            this.btnCargarBd.Location = new System.Drawing.Point(3, 3);
+            this.btnCargarBd.Name = "btnCargarBd";
+            this.btnCargarBd.Size = new System.Drawing.Size(180, 50);
+            this.btnCargarBd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnCargarBd.TabIndex = 58;
+            this.btnCargarBd.TabStop = false;
+            this.btnCargarBd.Click += new System.EventHandler(this.btnCargarBd_Click);
+            this.btnCargarBd.MouseLeave += new System.EventHandler(this.btnCargarBd_MouseLeave);
+            this.btnCargarBd.MouseHover += new System.EventHandler(this.btnCargarBd_MouseHover);
             // 
-            // btnExportarDatos
+            // btnDescargarBd
             // 
-            this.btnExportarDatos.Image = global::SwineTracker.Properties.Resources.exportarBase;
-            this.btnExportarDatos.Location = new System.Drawing.Point(35, 510);
-            this.btnExportarDatos.Name = "btnExportarDatos";
-            this.btnExportarDatos.Size = new System.Drawing.Size(195, 65);
-            this.btnExportarDatos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnExportarDatos.TabIndex = 40;
-            this.btnExportarDatos.TabStop = false;
-            this.btnExportarDatos.Click += new System.EventHandler(this.btnExportarDatos_Click);
-            this.btnExportarDatos.MouseLeave += new System.EventHandler(this.btnExportarDatos_MouseLeave);
-            this.btnExportarDatos.MouseHover += new System.EventHandler(this.btnExportarDatos_MouseHover);
-            // 
-            // btnSesion
-            // 
-            this.btnSesion.Image = global::SwineTracker.Properties.Resources.cerrarSesion;
-            this.btnSesion.Location = new System.Drawing.Point(925, 510);
-            this.btnSesion.Name = "btnSesion";
-            this.btnSesion.Size = new System.Drawing.Size(165, 65);
-            this.btnSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnSesion.TabIndex = 41;
-            this.btnSesion.TabStop = false;
-            this.btnSesion.Click += new System.EventHandler(this.btnSesion_Click);
-            this.btnSesion.MouseLeave += new System.EventHandler(this.btnSesion_MouseLeave);
-            this.btnSesion.MouseHover += new System.EventHandler(this.btnSesion_MouseHover);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(214, 136);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 17);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "Agregar Inseminación y/o Parto";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(20, 136);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 17);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Ingreso de Reemplazos";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(916, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 17);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "Dar de baja";
-            // 
-            // Logo
-            // 
-            this.Logo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Logo.Image = global::SwineTracker.Properties.Resources.logo;
-            this.Logo.Location = new System.Drawing.Point(405, -10);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(320, 135);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Logo.TabIndex = 45;
-            this.Logo.TabStop = false;
-            // 
-            // HeaderPanel
-            // 
-            this.HeaderPanel.Controls.Add(this.btnInseminacion);
-            this.HeaderPanel.Controls.Add(this.BtnRemplazos);
-            this.HeaderPanel.Controls.Add(this.btnFichas);
-            this.HeaderPanel.Controls.Add(this.label2);
-            this.HeaderPanel.Controls.Add(this.btnComparativaH);
-            this.HeaderPanel.Controls.Add(this.label1);
-            this.HeaderPanel.Controls.Add(this.btnComparativaF);
-            this.HeaderPanel.Location = new System.Drawing.Point(35, 105);
-            this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(1086, 160);
-            this.HeaderPanel.TabIndex = 46;
-            // 
-            // MainPanel
-            // 
-            this.MainPanel.Controls.Add(this.btnMin);
-            this.MainPanel.Controls.Add(this.btnMax);
-            this.MainPanel.Controls.Add(this.btnClose);
-            this.MainPanel.Controls.Add(this.FooterPanel);
-            this.MainPanel.Controls.Add(this.HeaderPanel);
-            this.MainPanel.Controls.Add(this.Logo);
-            this.MainPanel.Controls.Add(this.btnSesion);
-            this.MainPanel.Controls.Add(this.btnExportarDatos);
-            this.MainPanel.Controls.Add(this.btnCargarDatos);
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(0, 0);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1132, 610);
-            this.MainPanel.TabIndex = 0;
-            // 
-            // FooterPanel
-            // 
-            this.FooterPanel.Controls.Add(this.btnDestete);
-            this.FooterPanel.Controls.Add(this.btnFechaConfirmacion);
-            this.FooterPanel.Controls.Add(this.btnProyeccion);
-            this.FooterPanel.Controls.Add(this.label3);
-            this.FooterPanel.Controls.Add(this.btnNotificaciones);
-            this.FooterPanel.Controls.Add(this.btnBajas);
-            this.FooterPanel.Location = new System.Drawing.Point(35, 271);
-            this.FooterPanel.Name = "FooterPanel";
-            this.FooterPanel.Size = new System.Drawing.Size(1086, 152);
-            this.FooterPanel.TabIndex = 47;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Image = global::SwineTracker.Properties.Resources.cerrar;
-            this.btnClose.Location = new System.Drawing.Point(1095, 12);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(25, 25);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnClose.TabIndex = 48;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnCerrar_Click);
-            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
-            this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
-            // 
-            // btnMax
-            // 
-            this.btnMax.Image = global::SwineTracker.Properties.Resources.maximizar;
-            this.btnMax.Location = new System.Drawing.Point(1065, 12);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(25, 25);
-            this.btnMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnMax.TabIndex = 49;
-            this.btnMax.TabStop = false;
-            this.btnMax.Click += new System.EventHandler(this.btnMaximizar_Click);
-            this.btnMax.MouseLeave += new System.EventHandler(this.btnMax_MouseLeave);
-            this.btnMax.MouseHover += new System.EventHandler(this.btnMax_MouseHover);
-            // 
-            // btnMin
-            // 
-            this.btnMin.Image = global::SwineTracker.Properties.Resources.minimizar;
-            this.btnMin.Location = new System.Drawing.Point(1035, 12);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(25, 25);
-            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnMin.TabIndex = 50;
-            this.btnMin.TabStop = false;
-            this.btnMin.Click += new System.EventHandler(this.btnMinimize_Click);
-            this.btnMin.MouseLeave += new System.EventHandler(this.btnMin_MouseLeave);
-            this.btnMin.MouseHover += new System.EventHandler(this.btnMin_MouseHover);
+            this.btnDescargarBd.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnDescargarBd.BackColor = System.Drawing.Color.Transparent;
+            this.btnDescargarBd.Image = global::SwineTracker.Properties.Resources.exportardb;
+            this.btnDescargarBd.Location = new System.Drawing.Point(3, 65);
+            this.btnDescargarBd.Name = "btnDescargarBd";
+            this.btnDescargarBd.Size = new System.Drawing.Size(180, 50);
+            this.btnDescargarBd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnDescargarBd.TabIndex = 59;
+            this.btnDescargarBd.TabStop = false;
+            this.btnDescargarBd.Click += new System.EventHandler(this.btnDescargarBd_Click);
+            this.btnDescargarBd.MouseLeave += new System.EventHandler(this.btnDescargarBd_MouseLeave);
+            this.btnDescargarBd.MouseHover += new System.EventHandler(this.btnDescargarBd_MouseHover);
             // 
             // MenuPrincipal
             // 
@@ -379,65 +373,64 @@
             this.Controls.Add(this.MainPanel);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MenuPrincipal_FormClosing);
-            this.Load += new System.EventHandler(this.Menu_Principal_Load);
-            this.Resize += new System.EventHandler(this.MenuPrincipal_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.BtnRemplazos)).EndInit();
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
+            this.HeaderPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnFichaHembra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnComparativaHembra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInseminacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnFichas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnComparativaH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnComparativaF)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnFechaConfirmacion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProyeccion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDestete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNotificaciones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBajas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCargarDatos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExportarDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnComparativaFecha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReemplazos)).EndInit();
+            this.MainPanel.ResumeLayout(false);
+            this.WindowPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            this.ExtrasPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSesion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
-            this.HeaderPanel.ResumeLayout(false);
-            this.HeaderPanel.PerformLayout();
-            this.MainPanel.ResumeLayout(false);
-            this.FooterPanel.ResumeLayout(false);
-            this.FooterPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
+            this.BottomPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnDestete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNotificaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechaConfirmacion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProyeccionParto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBajas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCargarBd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDescargarBd)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.PictureBox BtnRemplazos;
-        private System.Windows.Forms.PictureBox btnInseminacion;
-        private System.Windows.Forms.PictureBox btnFichas;
-        private System.Windows.Forms.PictureBox btnComparativaH;
-        private System.Windows.Forms.PictureBox btnComparativaF;
-        private System.Windows.Forms.PictureBox btnFechaConfirmacion;
-        private System.Windows.Forms.PictureBox btnProyeccion;
-        private System.Windows.Forms.PictureBox btnDestete;
-        private System.Windows.Forms.PictureBox btnNotificaciones;
-        private System.Windows.Forms.PictureBox btnBajas;
-        private System.Windows.Forms.PictureBox btnCargarDatos;
-        private System.Windows.Forms.PictureBox btnExportarDatos;
-        private System.Windows.Forms.PictureBox btnSesion;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.Panel HeaderPanel;
         private System.Windows.Forms.Panel MainPanel;
-        private System.Windows.Forms.Panel FooterPanel;
+        private System.Windows.Forms.Panel BottomPanel;
+        private System.Windows.Forms.PictureBox btnFichaHembra;
+        private System.Windows.Forms.PictureBox btnComparativaHembra;
+        private System.Windows.Forms.PictureBox btnInseminacion;
+        private System.Windows.Forms.PictureBox btnComparativaFecha;
+        private System.Windows.Forms.PictureBox btnReemplazos;
+        private System.Windows.Forms.PictureBox btnDestete;
+        private System.Windows.Forms.PictureBox btnNotificaciones;
+        private System.Windows.Forms.PictureBox btnFechaConfirmacion;
+        private System.Windows.Forms.PictureBox btnProyeccionParto;
+        private System.Windows.Forms.PictureBox btnBajas;
+        private System.Windows.Forms.Panel ExtrasPanel;
+        private System.Windows.Forms.PictureBox btnSesion;
+        private System.Windows.Forms.PictureBox Logo;
+        private System.Windows.Forms.Panel WindowPanel;
         private System.Windows.Forms.PictureBox btnMin;
         private System.Windows.Forms.PictureBox btnMax;
         private System.Windows.Forms.PictureBox btnClose;
+        private System.Windows.Forms.PictureBox btnDescargarBd;
+        private System.Windows.Forms.PictureBox btnCargarBd;
     }
 }
 

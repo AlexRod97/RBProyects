@@ -52,6 +52,9 @@ namespace SwineTracker.Vistas
 
             Logo.Left = (this.ClientSize.Width / 2 - Logo.Width) / 2 + this.ClientSize.Width / 2;
             Logo.Top = (this.ClientSize.Height - Logo.Height) / 2;
+
+            txtUsername.BorderStyle = BorderStyle.None;
+            txtPassword.BorderStyle = BorderStyle.None;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
