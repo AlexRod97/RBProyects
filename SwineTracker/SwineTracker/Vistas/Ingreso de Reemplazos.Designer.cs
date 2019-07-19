@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ingreso_de_Reemplazos));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,19 +42,25 @@
             this.btnGuardar = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.WindowPanel = new System.Windows.Forms.Panel();
+            this.btnMin = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.WindowPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 23.7913F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(186, 106);
+            this.label1.Location = new System.Drawing.Point(159, 128);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(444, 45);
@@ -64,7 +71,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(85, 214);
+            this.label2.Location = new System.Drawing.Point(86, 239);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 25);
@@ -75,7 +82,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(66, 309);
+            this.label3.Location = new System.Drawing.Point(67, 334);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(216, 25);
@@ -86,7 +93,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(104, 392);
+            this.label4.Location = new System.Drawing.Point(105, 417);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(178, 25);
@@ -97,7 +104,7 @@
             // 
             this.txtHembra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtHembra.Font = new System.Drawing.Font("Arial", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHembra.Location = new System.Drawing.Point(406, 213);
+            this.txtHembra.Location = new System.Drawing.Point(407, 238);
             this.txtHembra.Margin = new System.Windows.Forms.Padding(4);
             this.txtHembra.Name = "txtHembra";
             this.txtHembra.Size = new System.Drawing.Size(132, 26);
@@ -107,7 +114,7 @@
             // 
             this.txtFechaNacimiento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFechaNacimiento.Font = new System.Drawing.Font("Arial", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFechaNacimiento.Location = new System.Drawing.Point(406, 299);
+            this.txtFechaNacimiento.Location = new System.Drawing.Point(407, 324);
             this.txtFechaNacimiento.Margin = new System.Windows.Forms.Padding(4);
             this.txtFechaNacimiento.Name = "txtFechaNacimiento";
             this.txtFechaNacimiento.Size = new System.Drawing.Size(132, 26);
@@ -117,7 +124,7 @@
             // 
             this.txtFechaIngreso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFechaIngreso.Font = new System.Drawing.Font("Arial", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFechaIngreso.Location = new System.Drawing.Point(406, 391);
+            this.txtFechaIngreso.Location = new System.Drawing.Point(407, 416);
             this.txtFechaIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.txtFechaIngreso.Name = "txtFechaIngreso";
             this.txtFechaIngreso.Size = new System.Drawing.Size(132, 26);
@@ -126,7 +133,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SwineTracker.Properties.Resources.inputlarge;
-            this.pictureBox1.Location = new System.Drawing.Point(385, 186);
+            this.pictureBox1.Location = new System.Drawing.Point(386, 211);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(245, 85);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -136,7 +143,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SwineTracker.Properties.Resources.inputlarge;
-            this.pictureBox2.Location = new System.Drawing.Point(385, 270);
+            this.pictureBox2.Location = new System.Drawing.Point(386, 295);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(245, 85);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -146,7 +153,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::SwineTracker.Properties.Resources.inputlarge;
-            this.pictureBox3.Location = new System.Drawing.Point(385, 361);
+            this.pictureBox3.Location = new System.Drawing.Point(386, 386);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(245, 85);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -167,7 +174,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox4.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox4.Location = new System.Drawing.Point(12, 40);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(708, 50);
             this.pictureBox4.TabIndex = 12;
@@ -177,12 +184,46 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureBox5.Image = global::SwineTracker.Properties.Resources.cropIco;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox5.Location = new System.Drawing.Point(12, 40);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(100, 50);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 13;
             this.pictureBox5.TabStop = false;
+            // 
+            // WindowPanel
+            // 
+            this.WindowPanel.Controls.Add(this.btnMin);
+            this.WindowPanel.Controls.Add(this.btnClose);
+            this.WindowPanel.Location = new System.Drawing.Point(626, 6);
+            this.WindowPanel.Name = "WindowPanel";
+            this.WindowPanel.Size = new System.Drawing.Size(94, 37);
+            this.WindowPanel.TabIndex = 67;
+            // 
+            // btnMin
+            // 
+            this.btnMin.Image = global::SwineTracker.Properties.Resources.minimizar1;
+            this.btnMin.Location = new System.Drawing.Point(34, 3);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(25, 25);
+            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnMin.TabIndex = 66;
+            this.btnMin.TabStop = false;
+            this.btnMin.MouseLeave += new System.EventHandler(this.btnMin_MouseLeave);
+            this.btnMin.MouseHover += new System.EventHandler(this.btnMin_MouseHover);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Image = global::SwineTracker.Properties.Resources.cerrar1;
+            this.btnClose.Location = new System.Drawing.Point(65, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(25, 25);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnClose.TabIndex = 64;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
+            this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
             // 
             // Ingreso_de_Reemplazos
             // 
@@ -192,6 +233,7 @@
             this.ClientSize = new System.Drawing.Size(732, 581);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.WindowPanel);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtFechaIngreso);
             this.Controls.Add(this.txtFechaNacimiento);
@@ -204,6 +246,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Ingreso_de_Reemplazos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -214,6 +257,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.WindowPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +280,8 @@
         private System.Windows.Forms.PictureBox btnGuardar;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel WindowPanel;
+        private System.Windows.Forms.PictureBox btnMin;
+        private System.Windows.Forms.PictureBox btnClose;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Actividad));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabControl2 = new MetroFramework.Controls.MetroTabControl();
             this.Inseminación = new MetroFramework.Controls.MetroTabPage();
@@ -88,6 +89,9 @@
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.WindowPanel = new System.Windows.Forms.Panel();
+            this.btnMin = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.PictureBox();
             this.metroTabControl2.SuspendLayout();
             this.Inseminación.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFecha)).BeginInit();
@@ -110,6 +114,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.WindowPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -125,10 +132,10 @@
             this.metroTabControl2.Controls.Add(this.Inseminación);
             this.metroTabControl2.Controls.Add(this.Preñez);
             this.metroTabControl2.Controls.Add(this.Partos);
-            this.metroTabControl2.Location = new System.Drawing.Point(12, 76);
+            this.metroTabControl2.Location = new System.Drawing.Point(13, 104);
             this.metroTabControl2.Name = "metroTabControl2";
             this.metroTabControl2.SelectedIndex = 0;
-            this.metroTabControl2.Size = new System.Drawing.Size(725, 736);
+            this.metroTabControl2.Size = new System.Drawing.Size(725, 691);
             this.metroTabControl2.Style = MetroFramework.MetroColorStyle.Red;
             this.metroTabControl2.TabIndex = 4;
             this.metroTabControl2.UseSelectable = true;
@@ -159,7 +166,7 @@
             this.Inseminación.HorizontalScrollbarSize = 10;
             this.Inseminación.Location = new System.Drawing.Point(4, 38);
             this.Inseminación.Name = "Inseminación";
-            this.Inseminación.Size = new System.Drawing.Size(717, 694);
+            this.Inseminación.Size = new System.Drawing.Size(717, 649);
             this.Inseminación.TabIndex = 0;
             this.Inseminación.Text = "Inseminación y confirmaciones";
             this.Inseminación.VerticalScrollbarBarColor = true;
@@ -168,7 +175,7 @@
             // 
             // btnFecha
             // 
-            this.btnFecha.Image = global::SwineTracker.Properties.Resources.guardarfibtn;
+            this.btnFecha.Image = ((System.Drawing.Image)(resources.GetObject("btnFecha.Image")));
             this.btnFecha.Location = new System.Drawing.Point(252, 401);
             this.btnFecha.Name = "btnFecha";
             this.btnFecha.Size = new System.Drawing.Size(386, 55);
@@ -287,7 +294,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = global::SwineTracker.Properties.Resources.inputlarge;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(362, 269);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(276, 82);
@@ -298,7 +305,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.Image = global::SwineTracker.Properties.Resources.inputlarge;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
             this.pictureBox5.Location = new System.Drawing.Point(362, 462);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(276, 82);
@@ -320,7 +327,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::SwineTracker.Properties.Resources.inputlarge;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(362, 93);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(276, 82);
@@ -331,7 +338,7 @@
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.White;
-            this.pictureBox6.Image = global::SwineTracker.Properties.Resources.inputlarge;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
             this.pictureBox6.Location = new System.Drawing.Point(362, 550);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(276, 82);
@@ -365,7 +372,7 @@
             this.Preñez.HorizontalScrollbarSize = 10;
             this.Preñez.Location = new System.Drawing.Point(4, 38);
             this.Preñez.Name = "Preñez";
-            this.Preñez.Size = new System.Drawing.Size(717, 694);
+            this.Preñez.Size = new System.Drawing.Size(717, 649);
             this.Preñez.TabIndex = 1;
             this.Preñez.Text = "Falsa preñéz";
             this.Preñez.VerticalScrollbarBarColor = true;
@@ -430,7 +437,7 @@
             // btnFalsaPreniez
             // 
             this.btnFalsaPreniez.BackColor = System.Drawing.Color.White;
-            this.btnFalsaPreniez.Image = global::SwineTracker.Properties.Resources.guardarfpbtn;
+            this.btnFalsaPreniez.Image = ((System.Drawing.Image)(resources.GetObject("btnFalsaPreniez.Image")));
             this.btnFalsaPreniez.Location = new System.Drawing.Point(187, 437);
             this.btnFalsaPreniez.Name = "btnFalsaPreniez";
             this.btnFalsaPreniez.Size = new System.Drawing.Size(349, 50);
@@ -441,7 +448,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Image = global::SwineTracker.Properties.Resources.inputlarge;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(300, 205);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(288, 82);
@@ -485,7 +492,7 @@
             this.Partos.HorizontalScrollbarSize = 10;
             this.Partos.Location = new System.Drawing.Point(4, 38);
             this.Partos.Name = "Partos";
-            this.Partos.Size = new System.Drawing.Size(717, 694);
+            this.Partos.Size = new System.Drawing.Size(717, 649);
             this.Partos.TabIndex = 2;
             this.Partos.Text = "Partos";
             this.Partos.VerticalScrollbarBarColor = true;
@@ -495,7 +502,7 @@
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.White;
-            this.btnGuardar.Image = global::SwineTracker.Properties.Resources.guardarbtn;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.Location = new System.Drawing.Point(430, 641);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(167, 50);
@@ -767,7 +774,7 @@
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.White;
-            this.pictureBox10.Image = global::SwineTracker.Properties.Resources.inputlarge;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
             this.pictureBox10.Location = new System.Drawing.Point(317, 61);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(280, 46);
@@ -778,7 +785,7 @@
             // pictureBox12
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.White;
-            this.pictureBox12.Image = global::SwineTracker.Properties.Resources.inputlarge;
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
             this.pictureBox12.Location = new System.Drawing.Point(317, 186);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(280, 46);
@@ -789,7 +796,7 @@
             // pictureBox13
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.White;
-            this.pictureBox13.Image = global::SwineTracker.Properties.Resources.inputlarge;
+            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
             this.pictureBox13.Location = new System.Drawing.Point(317, 371);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(280, 46);
@@ -800,7 +807,7 @@
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.White;
-            this.pictureBox14.Image = global::SwineTracker.Properties.Resources.inputlarge;
+            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
             this.pictureBox14.Location = new System.Drawing.Point(317, 248);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(280, 46);
@@ -811,7 +818,7 @@
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.White;
-            this.pictureBox15.Image = global::SwineTracker.Properties.Resources.inputlarge;
+            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
             this.pictureBox15.Location = new System.Drawing.Point(317, 309);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(280, 46);
@@ -822,7 +829,7 @@
             // pictureBox16
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.White;
-            this.pictureBox16.Image = global::SwineTracker.Properties.Resources.inputlarge;
+            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
             this.pictureBox16.Location = new System.Drawing.Point(317, 424);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(280, 46);
@@ -833,7 +840,7 @@
             // pictureBox17
             // 
             this.pictureBox17.BackColor = System.Drawing.Color.White;
-            this.pictureBox17.Image = global::SwineTracker.Properties.Resources.inputlarge;
+            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
             this.pictureBox17.Location = new System.Drawing.Point(317, 489);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(280, 46);
@@ -844,7 +851,7 @@
             // pictureBox18
             // 
             this.pictureBox18.BackColor = System.Drawing.Color.White;
-            this.pictureBox18.Image = global::SwineTracker.Properties.Resources.inputlarge;
+            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
             this.pictureBox18.Location = new System.Drawing.Point(317, 554);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(280, 46);
@@ -855,8 +862,8 @@
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox8.Image = global::SwineTracker.Properties.Resources.cropIco;
-            this.pictureBox8.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(19, 35);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(100, 50);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -866,23 +873,59 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox7.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox7.Location = new System.Drawing.Point(15, 35);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(725, 50);
             this.pictureBox7.TabIndex = 1;
             this.pictureBox7.TabStop = false;
+            // 
+            // WindowPanel
+            // 
+            this.WindowPanel.Controls.Add(this.btnMin);
+            this.WindowPanel.Controls.Add(this.btnClose);
+            this.WindowPanel.Location = new System.Drawing.Point(643, 1);
+            this.WindowPanel.Name = "WindowPanel";
+            this.WindowPanel.Size = new System.Drawing.Size(93, 34);
+            this.WindowPanel.TabIndex = 66;
+            // 
+            // btnMin
+            // 
+            this.btnMin.Image = global::SwineTracker.Properties.Resources.minimizar1;
+            this.btnMin.Location = new System.Drawing.Point(34, 3);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(25, 25);
+            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnMin.TabIndex = 66;
+            this.btnMin.TabStop = false;
+            this.btnMin.MouseLeave += new System.EventHandler(this.btnMin_MouseLeave);
+            this.btnMin.MouseHover += new System.EventHandler(this.btnMin_MouseHover);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Image = global::SwineTracker.Properties.Resources.cerrar1;
+            this.btnClose.Location = new System.Drawing.Point(65, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(25, 25);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnClose.TabIndex = 64;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
+            this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
             // 
             // Actividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(750, 824);
-            this.Controls.Add(this.metroTabControl2);
-            this.Controls.Add(this.metroTabControl1);
+            this.ClientSize = new System.Drawing.Size(750, 875);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.WindowPanel);
+            this.Controls.Add(this.metroTabControl2);
+            this.Controls.Add(this.metroTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Actividad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -912,6 +955,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.WindowPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -977,5 +1023,8 @@
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Panel WindowPanel;
+        private System.Windows.Forms.PictureBox btnMin;
+        private System.Windows.Forms.PictureBox btnClose;
     }
 }

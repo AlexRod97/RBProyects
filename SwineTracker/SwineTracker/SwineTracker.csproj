@@ -231,6 +231,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="minlogo.ico" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\minimizar1.png" />
+    <None Include="Resources\maximizar1.png" />
+    <None Include="Resources\cerrar1.png" />
     <None Include="Resources\inputsmall.png" />
     <None Include="Resources\buscarbtn.png" />
     <None Include="Resources\guardarbtn.png" />

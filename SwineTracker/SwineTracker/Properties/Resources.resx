@@ -139,6 +139,9 @@
   <data name="cargarhbtn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cargarhbtn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="maximizar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maximizar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="destete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\destete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,11 +187,17 @@
   <data name="proyeccionpartos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\proyeccionpartos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cerrar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="confirmacionesbtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\confirmacionesbtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="comparativaFechas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\comparativaFechas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inputsmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inputsmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dardebaja" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dardebaja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -198,6 +207,9 @@
   </data>
   <data name="guardarfibtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guardarfibtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minimizar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimizar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fichashembras" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fichashembras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,7 +223,7 @@
   <data name="cropIco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cropIco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="inputsmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inputsmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

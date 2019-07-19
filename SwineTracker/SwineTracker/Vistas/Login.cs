@@ -109,15 +109,9 @@ namespace SwineTracker.Vistas
 
         private void btnClose_MouseHover(object sender, EventArgs e)
         {
-            btnClose.BackColor = Color.Red;
+            btnClose.BackColor = Color.LightGray;
             btnClose.Size = new Size(30,30);
-        }
-
-        private void btnMax_MouseHover(object sender, EventArgs e)
-        {
-            btnMax.BackColor = Color.LightGray;
-            btnMax.Size = new Size(30, 30);
-        }
+        } 
 
         private void btnMin_MouseHover(object sender, EventArgs e)
         {
@@ -129,13 +123,7 @@ namespace SwineTracker.Vistas
         {
             btnClose.BackColor = Color.Transparent;
             btnClose.Size = new Size(25, 25);
-        }
-
-        private void btnMax_MouseLeave(object sender, EventArgs e)
-        {
-            btnMax.BackColor = Color.Transparent;
-            btnMax.Size = new Size(25, 25);
-        }
+        }   
 
         private void btnMin_MouseLeave(object sender, EventArgs e)
         {
