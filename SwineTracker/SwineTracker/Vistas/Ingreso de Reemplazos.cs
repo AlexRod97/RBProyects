@@ -24,26 +24,60 @@ namespace SwineTracker.Vistas
             mp.Show();
             this.Visible = false;
             this.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
+        }        
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Swine swine = new Swine();
-            Main main = new Main();
+           if(!string.IsNullOrEmpty(txtHembra.Text) || !string.IsNullOrWhiteSpace(txtHembra.Text))
+            {
+                Swine swine = new Swine();
+                Main main = new Main();
+                string arete = txtHembra.Text;
+                swine = main.ExisteArete(arete);
 
-            swine.setArete(txtHembra.Text.ToUpper());
-            swine.setFechaIngreso(txtFechaIngreso.Text);
-            swine.setfechaNacimiento(txtFechaNacimiento.Text);
-            main.Insert(swine.ConvertString());
-            MessageBox.Show("Ingreso exitoso");
-            txtFechaIngreso.Clear();
-            txtFechaNacimiento.Clear();
-            txtHembra.Clear();
+                if (swine.getArete() == null)
+                {
+                    DateTime dateNacimiento = fechaNacimiento.Value;
+                    DateTime dateIngreso = fechaIngreso.Value;
+                    swine.setArete(arete);
+                    swine.setFechaIngreso(dateIngreso.Date.ToString("dd-MM-yyyy"));
+                    swine.setfechaNacimiento(dateNacimiento.Date.ToString("dd-MM-yyyy"));
+                    swine.setActiva(1);
+                    if (string.IsNullOrWhiteSpace(txtAreteMadre.Text) == true || string.IsNullOrEmpty(txtAreteMadre.Text) == true ||
+                        string.IsNullOrWhiteSpace(txtAretePadre.Text) == true || string.IsNullOrEmpty(txtAretePadre.Text) == true ||
+                        string.IsNullOrWhiteSpace(txtHembra.Text) == true || string.IsNullOrEmpty(txtHembra.Text) == true)
+                    {
+                        MessageBox.Show("Hay campos sin llenar en el formulario");
+                    }
+                    else
+                    {
+                        if (txtAreteMadre.Text == txtAretePadre.Text || txtAreteMadre.Text == txtHembra.Text || txtAretePadre.Text == txtHembra.Text)
+                        {
+                            MessageBox.Show("Error en ingreso de datos, valores repetidos");
+                        }
+                        else
+                        {
+                            swine.setAreteMadre(txtAreteMadre.Text);
+                            swine.setIdPadre(txtAretePadre.Text);
+                            main.Insert(swine.ConvertString());
+                            MessageBox.Show("Ingreso con éxito");
+                            fechaIngreso.ResetText();
+                            fechaNacimiento.ResetText();
+                            txtHembra.Clear();
+                            txtAreteMadre.Clear();
+                            txtAretePadre.Clear();
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El arete que ingresó ya existe");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar el arete de una hembra para continuar");
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -73,6 +107,11 @@ namespace SwineTracker.Vistas
         {
             btnMin.BackColor = Color.Transparent;
             btnMin.Size = new Size(25, 25);
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

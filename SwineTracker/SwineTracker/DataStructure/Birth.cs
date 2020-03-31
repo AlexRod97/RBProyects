@@ -21,9 +21,18 @@ namespace SwineTracker.DataStructure
         private int nacidosVivos;
         private int nacidosMuertos;
         private int nacidosMomias;
+
+        private int MovimientoLechones;
+        private double porcentajeMortalidad;
+        private double pesoPrimeraInseminacion;
+        private string tipoInseminacion = "Tipo inseminacion"; 
+        private double grasaDorsal;
+        private int CantidadTetas;
+        private string TipoBaja = "Tipo baja"; 
+
         public List<int> pesos = new List<int>();
 
-
+        #region methods
         public string getFechaInseminacion()
         {
             return this.fechaInseminacion;
@@ -153,7 +162,77 @@ namespace SwineTracker.DataStructure
         {
             this.nacidosMomias = item;
         }
-             
+        #endregion
+
+        public int getMovimientoLechones()
+        {
+            return this.MovimientoLechones;
+        }
+
+        public void setMovimientoLechones(int item)
+        {
+            this.MovimientoLechones = item;
+        }
+
+        public double getPorcentajeMortalidad()
+        {
+            return this.porcentajeMortalidad;
+        }
+
+        public void setPorcentajeMortalidad(double item)
+        {
+            this.porcentajeMortalidad = item;
+        }
+
+        public double getPesoPrimeraInseminacion()
+        {
+            return this.pesoPrimeraInseminacion;
+        }
+
+        public void setPesoPrimeraInseminacion(double item)
+        {
+            this.pesoPrimeraInseminacion = item;
+        }
+
+        public string getTipoInseminacion()
+        {
+            return this.tipoInseminacion;
+        }
+
+        public void setTipoInseminacion(string item)
+        {
+            this.tipoInseminacion = item;
+        }
+
+        public double getGrasaDorsal()
+        {
+            return this.grasaDorsal;
+        }
+
+        public void setGrasaDorsal(double item)
+        {
+            this.grasaDorsal = item;
+        }
+
+        public int getCantidadTetas()
+        {
+            return this.CantidadTetas;
+        }
+
+        public void setCantidadTetas(int item)
+        {
+            this.CantidadTetas = item;
+        }
+
+        public string getTipoBaja()
+        {
+            return this.TipoBaja;
+        }
+
+        public void setTipoBaja(string item)
+        {
+            this.TipoBaja = item;
+        }
 
         public string ConvertString()
         {
@@ -186,6 +265,20 @@ namespace SwineTracker.DataStructure
             line.Append(getNacidosMuertos());
             line.Append("|");
             line.Append(getNacidosMomias());
+            line.Append("|");
+            line.Append(getMovimientoLechones());
+            line.Append("|");
+            line.Append(getPorcentajeMortalidad());
+            line.Append("|");
+            line.Append(getPesoPrimeraInseminacion());
+            line.Append("|");
+            line.Append(getTipoInseminacion());
+            line.Append("|");
+            line.Append(getGrasaDorsal());
+            line.Append("|");
+            line.Append(getCantidadTetas());
+            line.Append("|");
+            line.Append(getTipoBaja());
             line.Append("|");
 
             for (int i = 0; i < pesos.Count; i++)

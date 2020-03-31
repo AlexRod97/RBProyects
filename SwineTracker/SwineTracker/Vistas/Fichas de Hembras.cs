@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SwineTracker.DataStructure;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -62,7 +63,7 @@ namespace SwineTracker.Vistas
             for (int i = 1; i <= hembra.getTotalPartos(); i++)
             {
                 cbPartos.Items.Add(i.ToString());
-            }
+            }                      
         }
 
         private void btnClose_Click(object sender, EventArgs e)

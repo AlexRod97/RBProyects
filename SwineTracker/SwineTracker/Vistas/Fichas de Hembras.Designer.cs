@@ -63,11 +63,11 @@
             // txtArete
             // 
             this.txtArete.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtArete.Font = new System.Drawing.Font("Arial", 13.77391F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArete.Font = new System.Drawing.Font("Arial", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtArete.Location = new System.Drawing.Point(85, 236);
             this.txtArete.Margin = new System.Windows.Forms.Padding(4);
             this.txtArete.Name = "txtArete";
-            this.txtArete.Size = new System.Drawing.Size(215, 26);
+            this.txtArete.Size = new System.Drawing.Size(215, 22);
             this.txtArete.TabIndex = 0;
             this.txtArete.TextChanged += new System.EventHandler(this.txtHembra_TextChanged);
             // 
@@ -86,7 +86,7 @@
             // 
             this.cbPartos.Font = new System.Drawing.Font("Arial", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPartos.FormattingEnabled = true;
-            this.cbPartos.Location = new System.Drawing.Point(703, 232);
+            this.cbPartos.Location = new System.Drawing.Point(709, 228);
             this.cbPartos.Margin = new System.Windows.Forms.Padding(4);
             this.cbPartos.Name = "cbPartos";
             this.cbPartos.Size = new System.Drawing.Size(226, 30);

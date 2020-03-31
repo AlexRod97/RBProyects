@@ -9,13 +9,21 @@ namespace SwineTracker.DataStructure
     public class Swine
     {
         private string arete;
+        private int activa = 1;
+        private string areteMadre;
+        private string idPadre;
         private int totalPartos;
         private int totalLechonesVivos;
         private int totalLechonesMuertos;
         private int totalLechonesMomias;
+        private string FechaPrimerCelo = "-";
+        private string FechaSegundoCelo = "-";
+        private string FechaTercerCelo = "-";
+
         private string fechaIngreso = "-";
         private string fechaNacimiento = "-";
-        private string comentario = "-";
+        private string comentario = "No hay comentario";
+        
         public List<Birth> partos = new List<Birth>(); 
 
         public string getArete()
@@ -27,7 +35,37 @@ namespace SwineTracker.DataStructure
         {
             this.arete = item;
         }
+
+        public int getActiva()
+        {
+            return activa; 
+        }
         
+        public void setActiva(int item)
+        {
+            activa = item; 
+        }
+
+        public string getAreteMadre()
+        {
+            return areteMadre;
+        }
+
+        public void setAreteMadre(string item)
+        {
+            areteMadre = item; 
+        }
+
+        public string getIdPadre()
+        {
+            return idPadre;
+        }
+
+        public void setIdPadre(string item)
+        {
+            idPadre = item;
+        }
+
         public int getTotalPartos()
         {
             return this.totalPartos;
@@ -69,6 +107,36 @@ namespace SwineTracker.DataStructure
 
         }
 
+        public string getFechaPrimerCelo()
+        {
+            return this.FechaPrimerCelo;
+        }
+
+        public void setFechaPrimerCelo(string item)
+        {
+            this.FechaPrimerCelo = item;
+        }
+
+        public string getFechaSegundoCelo()
+        {
+            return this.FechaSegundoCelo;
+        }
+
+        public void setFechaSegundoCelo(string item)
+        {
+            this.FechaSegundoCelo = item;
+        }
+
+        public string getFechaTercerCelo()
+        {
+            return this.FechaTercerCelo;
+        }
+
+        public void setFechaTercerCelo(string item)
+        {
+            this.FechaTercerCelo = item;
+        }
+
         public string getFechaIngreso()
         {
             return this.fechaIngreso;
@@ -106,6 +174,12 @@ namespace SwineTracker.DataStructure
             line.Append("#");
             line.Append(getArete());
             line.Append("|");
+            line.Append(getActiva());
+            line.Append("|");
+            line.Append(getAreteMadre());
+            line.Append("|");
+            line.Append(getIdPadre());
+            line.Append("|");
             line.Append(getTotalPartos());
             line.Append("|");
             line.Append(getTotalLechonesVivos());
@@ -114,12 +188,17 @@ namespace SwineTracker.DataStructure
             line.Append("|");
             line.Append(getTotalLechonesMomia());
             line.Append("|");
+            line.Append(getFechaPrimerCelo());
+            line.Append("|");
+            line.Append(getFechaSegundoCelo());
+            line.Append("|");
+            line.Append(getFechaTercerCelo());
+            line.Append("|");
             line.Append(getFechaIngreso());
             line.Append("|");
             line.Append(getfechaNacimiento());
             line.Append("|");
-            line.Append(getComentario()); 
-            line.Append("|");
+            line.Append(getComentario());            
             line.Append("#");
 
             for (int i = 0; i < partos.Count; i++)

@@ -15,6 +15,7 @@ namespace SwineTracker.DataStructure
         Swine newSwine = new Swine();
         Swine oldSwine = new Swine();
 
+        #region Manejo de datos CRUD
         public void BuildDirectory(string fileDirectory)
         {
             MainfileDirectory = fileDirectory;
@@ -90,26 +91,9 @@ namespace SwineTracker.DataStructure
             File.Move(tempName, fileName);
         }
 
-        public List<Swine> BuscarPorArete(string item)
-        {
-            StreamReader sr = new StreamReader(MainfileDirectory + fileName);
-            List<Swine> results = new List<Swine>();
+        #endregion
 
-            while (!sr.EndOfStream)
-            {
-                string old = sr.ReadLine();
-                oldSwine = swineFabric.Distribute(old);
-
-                if (oldSwine.getArete().Contains(item))
-                {
-                    results.Add(oldSwine);
-                }
-            }
-            sr.Close();           
-
-            return results;
-        }
-
+        //Verifica que el arete exista con EQUALS
         public Swine ExisteArete(string item)
         {
             StreamReader sr = new StreamReader(MainfileDirectory + fileName);
@@ -136,10 +120,34 @@ namespace SwineTracker.DataStructure
             }
             catch (Exception)
             {
-                result = null; 
+                result = null;
             }
 
             return result;
         }
+
+        /*----------------------------------BUSCADORES POR CADA PARAMETRO NECESARIO----------------------------------*/
+
+        //Diferente a "ExisteArete" porque este busca con 'parecidos' 
+        public List<Swine> BuscarPorArete(string item)
+        {
+            StreamReader sr = new StreamReader(MainfileDirectory + fileName);
+            List<Swine> results = new List<Swine>();
+
+            while (!sr.EndOfStream)
+            {
+                string old = sr.ReadLine();
+                oldSwine = swineFabric.Distribute(old);
+
+                if (oldSwine.getArete().Contains(item))
+                {
+                    results.Add(oldSwine);
+                }
+            }
+            sr.Close();           
+
+            return results;
+        }
+        
     }
 }

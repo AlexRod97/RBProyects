@@ -26,260 +26,260 @@ namespace SwineTracker.Vistas
             this.Close();
         }     
        
-        private void btnFalsaPreniez_Click(object sender, EventArgs e)
+        private void btnParto_Click(object sender, EventArgs e)
         {
-            Swine swine = new Swine();
-            Main data = new Main();
-            string arete = textBox4.Text.ToUpper();
-            swine = data.ExisteArete(arete);
-
-            if (swine != null)
+           if((!string.IsNullOrEmpty(txtParto.Text) || !string.IsNullOrWhiteSpace(txtParto.Text)))
             {
-                Birth newBirth = new Birth();
+                Swine swine = new Swine();
+                Main main = new Main();
+                string arete = txtParto.Text;
+                swine = main.ExisteArete(arete);
 
-
-                DateTime fechaParto = dateTimePicker3.Value;
-                int lechonesTotales = Convert.ToInt32(maskedTextBox1.Text);
-                int lechonesVivos = Convert.ToInt32(maskedTextBox2.Text);
-                int hembras = Convert.ToInt32(maskedTextBox3.Text);
-                int machos = Convert.ToInt32(maskedTextBox4.Text);
-                int lechonesMuertos = Convert.ToInt32(maskedTextBox5.Text);
-                int lechonesMomias = Convert.ToInt32(maskedTextBox6.Text);
-                string pesos = maskedTextBox7.Text;
-
-                int total = hembras + machos;
-                int totalDistribuido = lechonesVivos + lechonesMuertos + lechonesMomias;
-
-                if (swine.partos.Count > 0)
+                if (swine != null)
                 {
-                    newBirth = swine.partos.Last();
+                    Birth newBirth = new Birth();
 
-                    if (newBirth.getFechaFalsaPreniez().Equals("-"))
+                    DateTime dateParto = fechaParto.Value;
+                    int lechonesTotales = Convert.ToInt32(txtLechonesTotales.Text);
+                    int lechonesVivos = Convert.ToInt32(txtLechonesVivos.Text);
+                    int hembras = Convert.ToInt32(txtHembras.Text);
+                    int machos = Convert.ToInt32(txtMachos.Text);
+                    int lechonesMuertos = Convert.ToInt32(txtMuertos.Text);
+                    int lechonesMomias = Convert.ToInt32(txtMomias.Text);
+                    string pesos = txtPesos.Text;
+
+                    int totaGenero = hembras + machos;
+                    int totalDistribuido = lechonesVivos + lechonesMuertos + lechonesMomias;
+
+                    if (swine.partos.Count > 0)
                     {
-                        if (lechonesTotales == total && lechonesTotales == totalDistribuido)
+                        newBirth = swine.partos.Last();
+
+                        if (newBirth.getFechaFalsaPreniez().Equals("-"))
                         {
-                            newBirth.setFechaParto(fechaParto.Date.ToString("dd-MM-yyyy"));
-                            newBirth.setTotalNacidos(lechonesTotales);
-                            newBirth.setNacidosVivos(lechonesVivos);
-                            newBirth.setNacidosMuertos(lechonesMuertos);
-                            newBirth.setNacidosMomias(lechonesMomias);
-                            newBirth.setTotalHembras(hembras);
-                            newBirth.setTotalMachos(machos);
-
-                            var items = pesos.Split(',');
-                            newBirth.pesos.Clear();
-
-                            if (items.Count() == lechonesVivos)
+                            if (lechonesTotales == totaGenero && lechonesTotales == totalDistribuido)
                             {
-                                for (int i = 0; i < items.Count(); i++)
+                                newBirth.setFechaParto(dateParto.Date.ToString("dd-MM-yyyy"));
+                                newBirth.setTotalNacidos(lechonesTotales);
+                                newBirth.setNacidosVivos(lechonesVivos);
+                                newBirth.setNacidosMuertos(lechonesMuertos);
+                                newBirth.setNacidosMomias(lechonesMomias);
+                                newBirth.setTotalHembras(hembras);
+                                newBirth.setTotalMachos(machos);
+                                newBirth.setMovimientoLechones(Convert.ToInt32(txtMovLechones.Text));
+                                //newBirth.setPorcentajeMortalidad();
+                                newBirth.setGrasaDorsal(Convert.ToDouble(txtGrasaDorsal.Text));
+                                newBirth.setCantidadTetas(Convert.ToInt32(txtCantTetas.Text));
+                                newBirth.setTipoBaja(txtTipoBaja.Text);
+
+                                var items = pesos.Split(',');
+                                newBirth.pesos.Clear();
+
+                                if (items.Count() == lechonesVivos)
                                 {
-                                    newBirth.pesos.Add(Convert.ToInt32(items.ElementAt(i)));
+                                    for (int i = 0; i < items.Count(); i++)
+                                    {
+                                        newBirth.pesos.Add(Convert.ToInt32(items.ElementAt(i)));
+                                    }
+
+                                    swine.setTotalPartos(swine.getTotalPartos() + 1);
+                                    int actualVivos = swine.getTotalLechonesVivos();
+                                    int actualMuertos = swine.getTotalLechonesMuertos();
+                                    int actualMomias = swine.getTotalLechonesMomia();
+
+                                    swine.setTotalLechonesVivos(actualVivos + lechonesVivos);
+                                    swine.setTotalLechonesMuertos(actualMuertos + lechonesMuertos);
+                                    swine.setTotalLechonesMomia(actualMomias + lechonesMomias);
+
+                                    main.Update(swine);
+
+                                    MessageBox.Show("El parto fue ingresado con éxito");
                                 }
-
-                                swine.setTotalPartos(swine.getTotalPartos() + 1);
-                                int actualVivos = swine.getTotalLechonesVivos();
-                                int actualMuertos = swine.getTotalLechonesMuertos();
-                                int actualMomias = swine.getTotalLechonesMomia();
-
-                                swine.setTotalLechonesVivos(actualVivos + lechonesVivos);
-                                swine.setTotalLechonesMuertos(actualMuertos + lechonesMuertos);
-                                swine.setTotalLechonesMomia(actualMomias + lechonesMomias);
-
-                                data.Update(swine);
-
-                                MessageBox.Show("El parto fue ingresado con éxito");
+                                else
+                                {
+                                    MessageBox.Show("La cantidad de pesos ingresados no coinciden con el total de lechones");
+                                }
                             }
                             else
                             {
-                                MessageBox.Show("La cantidad de pesos ingresados no coinciden con el total de lechones");
+                                MessageBox.Show("Los datos de hembras/machos o vivos/muertos/momias no coinciden");
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Los datos de hembras/machos o vivos/muertos/momias no coinciden");
+                            MessageBox.Show("La hembra " + swine.getArete() + " no está preñada");
                         }
                     }
-                    else
+                    else if (swine.partos == null || swine.partos.Count == 0 || newBirth.getFechaInseminacion().Equals("-"))
                     {
-                        MessageBox.Show("La hembra " + swine.getArete() + " no está preñada");
-                    }
-                }
-                else if (swine.partos == null || swine.partos.Count == 0 || newBirth.getFechaInseminacion().Equals("-"))
-                {
-                    MessageBox.Show("Verifique que la hembra seleccionada haya sido inseminada");
-                }
-            }
-            else
-            {
-                MessageBox.Show("El número de arete que ingresó no existe");
-            }
-        }
-
-        private void btnFecha_Click(object sender, EventArgs e)
-        {
-            Swine swine = new Swine();
-            Main data = new Main();
-            string arete = textBox1.Text.ToUpper();
-            swine = data.ExisteArete(arete);
-
-            //Validar fechas anteriores
-
-            /*
-             
-            DateTime fechaFalsaPreniez = dateTimePicker2.Value;
-                Birth newBirth = new Birth();
-                newBirth = swine.partos.Last();
-                if (!newBirth.getFechaFalsaPreniez().Equals("") && !newBirth.getFechaParto().Equals(""))
-                {
-                    newBirth.setFechaFalsaPreniez(fechaFalsaPreniez.Date.ToString("dd-MM-yyyy"));
-                }
-             */
-            if (swine != null)
-            {
-                if (swine.partos.Count > 0)
-                {
-                    DateTime now = DateTime.Now;
-                    Birth birth = swine.partos.Last();
-                    string last = birth.getFechaInseminacion();
-                    DateTime lastDate = DateTime.ParseExact(last, "dd-MM-yyyy", null);
-                    int result = now.CompareTo(lastDate);
-
-                    if (result > 0)
-                    {
-                        DateTime fechaInseminacion = dateTimePicker1.Value;
-                        DateTime fechaConfirmacion21 = fechaInseminacion.AddDays(21);
-                        DateTime fechaConfirmacion28 = fechaInseminacion.AddDays(28);
-                        Birth newBirth = new Birth();
-
-                        textBox2.Text = fechaConfirmacion21.Date.ToString("dd-MM-yyyy");
-                        textBox3.Text = fechaConfirmacion28.Date.ToString("dd-MM-yyyy");
-                        string lote = textBox10.Text;
-
-                        newBirth.setFechaInseminacion(fechaInseminacion.Date.ToString("dd-MM-yyyy"));
-                        newBirth.setLote(lote);
-                        newBirth.setFechaConfirmacion21(fechaConfirmacion21.Date.ToString("dd-MM-yyyy"));
-                        newBirth.setFechaConfirmacion28(fechaConfirmacion28.Date.ToString("dd-MM-yyyy"));
-                        swine.partos.Add(newBirth);
-                        data.Update(swine);
-                        MessageBox.Show("Fecha de inseminación ingresada");
-                    }
-                    else
-                    {
-                        MessageBox.Show("La hembra sigue en fecha de confirmación");
+                        MessageBox.Show("Verifique que la hembra seleccionada haya sido inseminada");
                     }
                 }
                 else
                 {
-                    DateTime fechaInseminacion = dateTimePicker1.Value;
-                    DateTime fechaConfirmacion21 = fechaInseminacion.AddDays(21);
-                    DateTime fechaConfirmacion28 = fechaInseminacion.AddDays(28);
-                    Birth newBirth = new Birth();
-
-                    textBox2.Text = fechaConfirmacion21.Date.ToString("dd-MM-yyyy");
-                    textBox3.Text = fechaConfirmacion28.Date.ToString("dd-MM-yyyy");
-                    string lote = textBox10.Text;
-
-                    newBirth.setFechaInseminacion(fechaInseminacion.Date.ToString("dd-MM-yyyy"));
-                    newBirth.setLote(lote);
-                    newBirth.setFechaConfirmacion21(fechaConfirmacion21.Date.ToString("dd-MM-yyyy"));
-                    newBirth.setFechaConfirmacion28(fechaConfirmacion28.Date.ToString("dd-MM-yyyy"));
-                    swine.partos.Add(newBirth);
-                    data.Update(swine);
-                    MessageBox.Show("Fecha de inseminación ingresada");
+                    MessageBox.Show("El número de arete que ingresó no existe");
                 }
             }
             else
             {
-                MessageBox.Show("El número de arete que ingresó no existe");
+                MessageBox.Show("Debe ingresar el arete de una hembra para continuar");
             }
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void btnInseminacion_Click(object sender, EventArgs e)
         {
-            Swine swine = new Swine();
-            Main data = new Main();
-            string arete = textBox4.Text.ToUpper();
-            swine = data.ExisteArete(arete);
-
-            if (swine != null)
+           if(!string.IsNullOrEmpty(txtAreteInseminacion.Text) || !string.IsNullOrWhiteSpace(txtAreteInseminacion.Text))
             {
-                Birth newBirth = new Birth();
+                Swine swine = new Swine();
+                Main main = new Main();
+                string arete = txtAreteInseminacion.Text;
+                swine = main.ExisteArete(arete);
 
+                //Validar fechas anteriores
 
-                DateTime fechaParto = dateTimePicker3.Value;
-                int lechonesTotales = Convert.ToInt32(maskedTextBox1.Text);
-                int lechonesVivos = Convert.ToInt32(maskedTextBox2.Text);
-                int hembras = Convert.ToInt32(maskedTextBox3.Text);
-                int machos = Convert.ToInt32(maskedTextBox4.Text);
-                int lechonesMuertos = Convert.ToInt32(maskedTextBox5.Text);
-                int lechonesMomias = Convert.ToInt32(maskedTextBox6.Text);
-                string pesos = maskedTextBox7.Text;
+                /*
 
-                int total = hembras + machos;
-                int totalDistribuido = lechonesVivos + lechonesMuertos + lechonesMomias;
-
-                if (swine.partos.Count > 0)
-                {
+                DateTime fechaFalsaPreniez = dateTimePicker2.Value;
+                    Birth newBirth = new Birth();
                     newBirth = swine.partos.Last();
-
-                    if (newBirth.getFechaFalsaPreniez().Equals("-"))
+                    if (!newBirth.getFechaFalsaPreniez().Equals("") && !newBirth.getFechaParto().Equals(""))
                     {
-                        if (lechonesTotales == total && lechonesTotales == totalDistribuido)
+                        newBirth.setFechaFalsaPreniez(fechaFalsaPreniez.Date.ToString("dd-MM-yyyy"));
+                    }
+                 */
+                if (swine.getArete() != null)
+                {
+                    if (swine.partos.Count > 0)
+                    {
+                        DateTime now = DateTime.Now;
+                        Birth birth = swine.partos.Last();
+                        string last = birth.getFechaInseminacion();
+
+                        if (last.Equals("-"))
                         {
-                            newBirth.setFechaParto(fechaParto.Date.ToString("dd-MM-yyyy"));
-                            newBirth.setTotalNacidos(lechonesTotales);
-                            newBirth.setNacidosVivos(lechonesVivos);
-                            newBirth.setNacidosMuertos(lechonesMuertos);
-                            newBirth.setNacidosMomias(lechonesMomias);
-                            newBirth.setTotalHembras(hembras);
-                            newBirth.setTotalMachos(machos);
+                            DateTime dateInseminacion = fechaInseminacion.Value;
+                            DateTime fechaConfirmacion21 = dateInseminacion.AddDays(21);
+                            DateTime fechaConfirmacion28 = dateInseminacion.AddDays(28);
+                            //DateTime fechaPosibleParto = dateInseminacion.AddDays(114);
+                            Birth newBirth = new Birth();
 
-                            var items = pesos.Split(',');
-                            newBirth.pesos.Clear();
+                            txtConfirmacion21.Text = fechaConfirmacion21.Date.ToString("dd-MM-yyyy");
+                            txtConfirmacion28.Text = fechaConfirmacion28.Date.ToString("dd-MM-yyyy");
+                            //txtPosibleParto.Text = fechaPosibleParto.Date.ToString("dd-MM-yyyy");
+                            string lote = txtLote.Text;
 
-                            if (items.Count() == lechonesVivos)
+                            if(!string.IsNullOrEmpty(txtLote.Text) || !string.IsNullOrWhiteSpace(txtLote.Text))
                             {
-                                for (int i = 0; i < items.Count(); i++)
-                                {
-                                    newBirth.pesos.Add(Convert.ToInt32(items.ElementAt(i)));
-                                }
-
-                                swine.setTotalPartos(swine.getTotalPartos() + 1);
-                                int actualVivos = swine.getTotalLechonesVivos();
-                                int actualMuertos = swine.getTotalLechonesMuertos();
-                                int actualMomias = swine.getTotalLechonesMomia();
-
-                                swine.setTotalLechonesVivos(actualVivos + lechonesVivos);
-                                swine.setTotalLechonesMuertos(actualMuertos + lechonesMuertos);
-                                swine.setTotalLechonesMomia(actualMomias + lechonesMomias);
-
-                                data.Update(swine);
-
-                                MessageBox.Show("El parto fue ingresado con éxito");
+                                newBirth.setFechaInseminacion(dateInseminacion.Date.ToString("dd-MM-yyyy"));
+                                newBirth.setLote(lote);
+                                newBirth.setFechaConfirmacion21(fechaConfirmacion21.Date.ToString("dd-MM-yyyy"));
+                                newBirth.setFechaConfirmacion28(fechaConfirmacion28.Date.ToString("dd-MM-yyyy"));
+                                //newBirth.setFechaPosibleParto(fechaPosibleParto.Date.ToString("dd-MM-yyyy"));
+                                swine.partos.Add(newBirth);
+                                main.Update(swine);
+                                MessageBox.Show("Fecha de inseminación ingresada");
                             }
                             else
                             {
-                                MessageBox.Show("La cantidad de pesos ingresados no coinciden con el total de lechones");
-                            }
+                                MessageBox.Show("Debe ingresar el lote de la hembra");
+                            }                           
                         }
                         else
                         {
-                            MessageBox.Show("Los datos de hembras/machos o vivos/muertos/momias no coinciden");
+                            MessageBox.Show("La hembra ya está inseminada, verifique fecha de confirmación");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("La hembra " + swine.getArete() + " no está preñada");
+                        DateTime dateInseminacion = fechaInseminacion.Value;
+                        DateTime fechaConfirmacion21 = dateInseminacion.AddDays(21);
+                        DateTime fechaConfirmacion28 = dateInseminacion.AddDays(28);
+                        Birth newBirth = new Birth();
+
+                        txtConfirmacion21.Text = fechaConfirmacion21.Date.ToString("dd-MM-yyyy");
+                        txtConfirmacion28.Text = fechaConfirmacion28.Date.ToString("dd-MM-yyyy");
+                        string lote = txtLote.Text;
+
+                        if (!string.IsNullOrEmpty(txtLote.Text) || !string.IsNullOrWhiteSpace(txtLote.Text))
+                        {
+                            newBirth.setFechaInseminacion(dateInseminacion.Date.ToString("dd-MM-yyyy"));
+                            newBirth.setLote(lote);
+                            newBirth.setFechaConfirmacion21(fechaConfirmacion21.Date.ToString("dd-MM-yyyy"));
+                            newBirth.setFechaConfirmacion28(fechaConfirmacion28.Date.ToString("dd-MM-yyyy"));
+                            swine.partos.Add(newBirth);
+                            main.Update(swine);
+                            MessageBox.Show("Fecha de inseminación ingresada");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Debe ingresar el lote de la hembra");
+                        }
                     }
                 }
-                else if (swine.partos == null || swine.partos.Count == 0 || newBirth.getFechaInseminacion().Equals("-"))
+                else
                 {
-                    MessageBox.Show("Verifique que la hembra seleccionada haya sido inseminada");
+                    MessageBox.Show("El número de arete que ingresó no existe");
                 }
             }
             else
             {
-                MessageBox.Show("El número de arete que ingresó no existe");
+                MessageBox.Show("Debe ingresar el arete de una hembra para continuar");
+            }
+        }
+         
+        private void btnFalsaPreniez_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtAreteInseminacion.Text) || !string.IsNullOrWhiteSpace(txtAreteInseminacion.Text))
+            {
+                Swine swine = new Swine();
+                Main main = new Main();
+                string arete = txtAreteInseminacion.Text;
+                swine = main.ExisteArete(arete);
+              
+                if (swine.getArete() != null)
+                {
+                    if (swine.partos.Count > 0)
+                    {
+                        DateTime now = DateTime.Now;
+                        Birth birth = swine.partos.Last();
+                        string last = birth.getFechaInseminacion();
+                        DateTime fechaConfirmacion = DateTime.ParseExact(birth.getFechaConfirmacion28(),"dd-MM-yyyy",null);
+                        int comparacion = now.CompareTo(fechaConfirmacion);
+
+                        if (comparacion > 0)
+                        {
+                            DateTime dateFalsaPreniez = fechaFalsaP.Value;
+                            int comparacion2 = dateFalsaPreniez.CompareTo(fechaConfirmacion);
+
+                            if(comparacion > 0) //Será necesaria?
+                            {
+                                string date = dateFalsaPreniez.Date.ToString("dd-MM-yyyy");
+                                birth.setFechaFalsaPreniez(date);
+                                main.Update(swine);
+                            }
+                            else
+                            {
+                                MessageBox.Show("La fecha que ingresó es anterior a la fecha de confirmación");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Aún no han pasado los 28 días de confirmación");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("La hembra nunca ha iniciado proceso de embarazo");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El número de arete que ingresó no existe");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar el arete de una hembra para continuar");
             }
         }
 
@@ -311,6 +311,11 @@ namespace SwineTracker.Vistas
         {
             btnMin.BackColor = Color.Transparent;
             btnMin.Size = new Size(25, 25);
+        }
+
+        private void Actividad_Load(object sender, EventArgs e)
+        {
+            cbTipoInseminacion.SelectedIndex = 0;
         }
     }
 }
